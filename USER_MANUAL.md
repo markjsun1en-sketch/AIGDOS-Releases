@@ -55,8 +55,6 @@ AI IDE 不应该把 v4.93 当成普通文档目录，也不应该直接从 `os_l
 例如：
 
 - “帮我做一个完整游戏 GDD” -> GDD orchestration 和 specialist GDD skills。
-- “把 lessismore 接入 v493” -> project readiness、Shared Truth、
-  Architecture Baseline、Beta Readiness。
 - “这个问题以后别再发生” -> FixOps problem/fix/pattern workflow。
 - “让 AI agents 分工做” -> Orchestrator routing、agent run plan、runtime
   adapter contract。
