@@ -34,6 +34,33 @@ Start here:
   formalization, runtime instance separation, mirror policy, release refresh,
   and real-project promotion.
 
+## System At A Glance
+
+This is the compact README view of the v4.93 architecture. The authoritative
+detailed diagrams and architecture rules live in
+`DESIGN_AND_CAPABILITY_ARCHITECTURE.md` inside the release archive.
+
+```mermaid
+flowchart TB
+  L1["L1 Control and Authority<br/>Human - Owner - Orchestrator"]
+  L2["L2 Planning and Governance<br/>Intent - Roadmap - Change - Release"]
+  L3["L3 Execution and Capability<br/>Production Pack - Agents - Skills - Adapters"]
+  L4["L4 Runtime Truth<br/>Manifest - Run Plan - Trace - Shared Truth - Artifacts"]
+  L5["L5 Validation and Evidence<br/>Validators - Reconciliation - Readiness"]
+  L6["L6 Observation and Delivery<br/>Reports - Release Snapshot - Archive"]
+  EXT["External Truth<br/>Project Repo - Git and CI - Issue Tracker - Docs - .dev_os_meta"]
+
+  L1 --> L2 --> L3 --> L4 --> L5 --> L6
+  EXT -. project state and evidence .-> L4
+  EXT -. validation signals .-> L5
+  L5 -. verdict inputs .-> L1
+```
+
+Authority flows downward from human governance to scoped execution. Runtime
+truth and project evidence flow into validation, while lifecycle promotion
+returns to human approval. Lower layers may recommend a verdict; they cannot
+silently promote the release.
+
 ## What This Version Contains
 
 v4.93 is a split-layer AI game development system:
@@ -184,6 +211,44 @@ user goal
 -> validation command
 -> stop condition
 ```
+
+### Real-Project Adoption Flow
+
+The following sequence shows the complete handoff across human authority, the
+AI IDE or runtime adapter, OS routing, pack execution, project state, evidence,
+validation, and manual review.
+
+```mermaid
+sequenceDiagram
+  actor Owner as Human / Owner
+  participant IDE as AI IDE / Runtime Adapter
+  participant Orch as Orchestrator
+  participant Pack as Production Pack
+  participant Project as Target Project
+  participant Artifacts as Artifact Root
+  participant Validators as Validators
+  participant Review as Manual Review
+
+  Owner->>IDE: request project adoption or production workflow
+  IDE->>IDE: read root entrypoints and architecture contract
+  IDE->>Orch: request OS/Pack routing review
+  Orch-->>IDE: selected layer, owner, evidence, stop condition
+  IDE->>Project: inspect project root and .ai_dev_os state
+  IDE->>Pack: select workflow, agents, skills, and validators
+  Pack-->>IDE: artifact contracts and handoff lanes
+  IDE->>Project: execute scoped agent/runtime work
+  Project-->>Artifacts: write delivery artifacts and reports
+  Project-->>IDE: return agent execution trace
+  IDE->>Validators: run schema, semantic, trace, and readiness checks
+  Validators-->>Artifacts: beta readiness report and logs
+  Validators-->>Review: blockers, verdict inputs, evidence summary
+  Review-->>Owner: recommend PASS/BLOCKED and promotion decision
+  Owner-->>IDE: approve, reject, or request follow-up
+```
+
+Real-project adoption remains blocked until project runtime state, delivery
+artifacts, a runtime-produced execution trace, validation logs, a readiness
+report, and manual review are present.
 
 Repository Python scripts may generate plans, contracts, reports, and
 validators. They do not become an automatic LLM router and do not silently
