@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0.0",
+  "artifact_type": "v497_limited_release_build_receipt",
+  "status": "accepted_limited_developer_artifact",
+  "date": "2026-09-14",
+  "release_tag": "v4.97-limited-release",
+  "release_kind": "full_tracked_developer_package_limited_candidate",
+  "lifecycle_status": "draft",
+  "artifact": {
+    "status": "PASS",
+    "source_commit": "edaeed7b8d96482d94c06173c6e218ec378cb4f4",
+    "package_tree": "b482b0d123626c98920d9398c77760678fa91d90",
+    "zip_sha256": "182b7b77a1852b61bc7d392b96ea061d146ebdffc11ef6cfe7487fea7329022b",
+    "zip_bytes": 6619126,
+    "deterministic_zip_equal": true,
+    "zip_entries": 2907,
+    "payload_files": 2904,
+    "generated_metadata_files": 3,
+    "crc_path_mode_payload_checksums": "PASS"
+  },
+  "checks": {
+    "builder_regression": {
+      "passed": 11
+    },
+    "source_manifest_and_docs_original": {
+      "passed": 48,
+      "failed": 2,
+      "candidate": 1
+    },
+    "source_scoped_candidate_02": {
+      "passed": 48,
+      "deselected": 2
+    },
+    "source_aware_docs": {
+      "status": "PASS_with_external_Git_presence_only",
+      "source_development_commit": "4e6b75e99e8d09d188091460f68f9eee2639e122",
+      "external_unique_git_paths": 13,
+      "unresolved_package_references": 0,
+      "document_count": 94,
+      "mirrored_assertions": 94
+    },
+    "extracted_manifest_tests": {
+      "passed": 34,
+      "failed": 1
+    },
+    "mirror_groups": 3,
+    "freshness": "PASS",
+    "strict_transients": "PASS",
+    "source_byte_validation": "PASS"
+  },
+  "context_exceptions": [
+    {
+      "test": "test_docs_path_checker_accepts_release_docs",
+      "context": "source package without local historical meta evidence",
+      "disposition": "external_repository_dependency_not_standalone_PASS"
+    },
+    {
+      "test": "test_docs_path_checker_accepts_all_first_class_release_docs",
+      "context": "source package without local historical meta evidence",
+      "disposition": "external_repository_dependency_not_standalone_PASS; count90_to94 corrected in candidate2"
+    },
+    {
+      "test": "test_v493_includes_fixops_problem_intake_foundation",
+      "context": "standalone extracted ZIP",
+      "disposition": "requires repository .dev_os_meta/fixops cards; passed in original source context; extracted FAIL retained"
+    }
+  ],
+  "qualification_accepted": false,
+  "professional_efficacy_accepted": false,
+  "standalone_runtime": false,
+  "formal_baseline_replaced": false,
+  "private_materials_bundled": false,
+  "new_live_requests": 0,
+  "source_publication_commit": "111af601f47f892a29e1ba489d46681915e16e7b",
+  "source_candidate_review_commit": "111af601f47f892a29e1ba489d46681915e16e7b",
+  "build_source_commit": "edaeed7b8d96482d94c06173c6e218ec378cb4f4",
+  "build_source_package_tree": "b482b0d123626c98920d9398c77760678fa91d90",
+  "independent_artifact_reviews": [
+    {
+      "role": "architecture",
+      "path": ".dev_os_meta/release/v497/reviews/artifact_architecture.json",
+      "sha256": "7e22eacb422cf65d6b337fe3b94c81a5df0927850902f0c64c9115d551fe172d"
+    },
+    {
+      "role": "evidence",
+      "path": ".dev_os_meta/release/v497/reviews/artifact_evidence.json",
+      "sha256": "8befd1600a4422af666ed1e66355c97b7c56b5d4ef1d9fbfb41cc9b94c7e47fd"
+    }
+  ]
+}

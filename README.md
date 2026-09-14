@@ -1,3 +1,19 @@
+# AI Game Dev OS release archives
+
+## v4.97 — 有限候选开发包（2026-09-14）
+
+v497 有限候选阶段已关闭，包生命周期仍为 draft。完整 L3 / PC-3 和专业效能未通过验收；本次发布不替代 v496 正式验收基线。
+
+- [下载 v497 干净源码 ZIP](AI_Game_Dev_OS_v4.97_Limited_Release.zip)
+- [SHA-256 校验](AI_Game_Dev_OS_v4.97_Limited_Release.zip.sha256)
+- [v497 版本说明](V497_RELEASE_NOTES.md)
+- [构建与验收收据](V497_BUILD_RECEIPT.json)
+- [源码标签](https://github.com/markjsun1en-sketch/AIGDOS/tree/v4.97-limited-release/AI_Game_Dev_OS_v4.97)
+
+ZIP 保留精确已提交包的源码、测试、fixture 和兼容镜像，排除本地保管材料、授权确认、原始捕获、IDE 登录及项目运行状态。它是依赖原开发上下文的 developer source package，不是完整专业评测的独立安装包；详见版本说明中的验证范围与限制。
+
+## 历史 v4.93 说明（保留原文）
+
 AI Game Dev OS v4.93
 
 `AI_Game_Dev_OS_v4.93/` is the active v4.93 source tree and this file is the
