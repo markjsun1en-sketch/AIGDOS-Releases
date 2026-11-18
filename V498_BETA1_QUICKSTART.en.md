@@ -10,6 +10,51 @@ The current public version is **v4.98-beta.1**, intended for **new Godot project
 - [Download the SHA-256 checksum file](https://raw.githubusercontent.com/markjsun1en-sketch/AIGDOS-Releases/main/DevOS-v4.98-beta.1-candidate.zip.sha256)
 - [Purpose and full capability guide](https://github.com/markjsun1en-sketch/AIGDOS-Releases/blob/main/AIGDOS_CAPABILITIES.en.md)
 
+## AI-assisted setup: fresh installation or update
+
+For a **new Godot project on macOS**, you can ask your AI coding assistant to set up AIGDOS from this ZIP. Use the full version **v4.98-beta.1** and provide this release repository or the downloaded ZIP's location. Here, installation means verifying and extracting the development package, preparing dependencies, and connecting the host's project instructions to the package.
+
+| Situation | What to ask the assistant to do |
+| --- | --- |
+| **Fresh installation / new project** | Follow the setup steps below using new extraction, environment, and workspace directories. Keep the development package outside the game project. One complete ZIP is sufficient; no older Dev OS installation is required. |
+| **Existing project / update from an older version** | First inspect the installed version, package/project bindings, custom instructions, task state, evidence, and uncommitted changes. This Beta has **no general-purpose updater**. Extracting a new ZIP does not migrate a project; do not overwrite the old installation or rebind its project as a routine setup step. The packaged RandomHeroes adoption tool is limited to its documented profile and is not a general migration tool. |
+
+- **Required:** the assistant needs access to the selected files and permission to run the necessary local commands. Verify SHA-256, prepare the dependencies, run `doctor --profile godot`, and make sure the host actually loads the applicable project instructions. Downloading the ZIP alone does not activate its rules.
+- **Useful first check:** after `doctor` passes, run the bundled charge-meter example in a new external workspace. Its `CLAIMED_DONE` result still requires independent review and human acceptance.
+- **Optional:** configure art tools, external memory, and advanced modules when the project needs them.
+
+The package includes adaptation material for **Codex**, **Cursor**, and **`workbuddy_private`**, but not every host configuration was validated in this Beta. `workbuddy_private` describes a specific private profile; it does not establish compatibility with every WorkBuddy installation. The assistant should inspect the selected profile and confirm which instructions are active in the actual host. For Codex, this includes the game project's `AGENTS.md` and any applicable override. Preserve existing project rules when configuring a host. See the [host responsibilities and limits](AIGDOS_CAPABILITIES.en.md#responsibilities-of-people-the-ai-host-and-aigdos).
+
+### Copyable prompt for a fresh setup
+
+A short request such as “Set up AIGDOS v4.98-beta.1 for a new Godot project” can start the setup conversation when accompanied by the release repository or local ZIP path. The following complete prompt makes the setup checks explicit:
+
+```text
+Set up AIGDOS v4.98-beta.1 for a new Godot project on macOS.
+Release repository: https://github.com/markjsun1en-sketch/AIGDOS-Releases
+
+Download the complete ZIP and checksum, or use the copies I provide. Verify SHA-256 before extraction. Read the quick-start guide and tools/dev_os_candidate/README.md inside the package. Use new directories and keep the package outside the game project.
+
+Prepare the documented dependencies, select the profile appropriate to this AI host, and configure/load the project instructions. Run doctor --profile godot. Only after it passes, inspect the supplied charge_meter.json and run it in a new external workspace.
+
+Preserve existing installations, projects, instructions, task state, and uncommitted changes. Keep the package payload unchanged. If the target is an existing project, assess migration support first instead of treating it as a fresh installation.
+
+Report the package/project paths, active host instructions, doctor result, execution evidence, and remaining review/acceptance steps. Do not describe CLAIMED_DONE as human acceptance or full-release qualification.
+```
+
+### Copyable prompt for an existing-project update assessment
+
+For an existing project, start with inspection. An applicable migration procedure, validation plan, and rollback approach are needed before changing its bindings or state; this guide does not supply a generic upgrade command.
+
+```text
+Assess whether my existing project can adopt AIGDOS v4.98-beta.1.
+Release repository: https://github.com/markjsun1en-sketch/AIGDOS-Releases
+
+Read the current installation/project instructions and the target release documentation. Inspect versions, package/project bindings, task state and history, evidence, external memory references, custom host rules, and uncommitted changes.
+
+Report whether a documented migration path applies, what would change, how to validate it, how rollback would work, and what remains unsupported. Do not assume the RandomHeroes-specific adoption tool applies to my project. This request is an assessment: leave the existing installation, project bindings, state, and work products unchanged.
+```
+
 ## 1. Verify the download
 
 Put the ZIP and checksum file in the same directory, open a terminal there, and run:
