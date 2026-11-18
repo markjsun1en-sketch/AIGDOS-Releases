@@ -4,7 +4,7 @@
 
 这里是 AIGDOS 的公开分发仓库。当前公开开发包为 **v4.98-beta.1**，面向 **macOS 上的全新 Godot 项目**，发布于 2026-11-18。
 
-[下载完整 Beta 包](https://raw.githubusercontent.com/markjsun1en-sketch/AIGDOS-Releases/main/DevOS-v4.98-beta.1-candidate.zip) · [完整能力说明](AIGDOS_CAPABILITIES.md) · [版本说明与上手](V498_BETA1_RELEASE_NOTES.md) · [构建收据](V498_BETA1_BUILD_RECEIPT.json)
+[下载完整 Beta 包](https://raw.githubusercontent.com/markjsun1en-sketch/AIGDOS-Releases/main/DevOS-v4.98-beta.1-candidate.zip) · [新用户指南](V498_BETA1_QUICKSTART.md) · [完整能力说明](AIGDOS_CAPABILITIES.md) · [版本说明](V498_BETA1_RELEASE_NOTES.md) · [构建收据](V498_BETA1_BUILD_RECEIPT.json)
 
 ## AIGDOS 用来做什么
 
@@ -46,6 +46,8 @@
 构建源码提交：`e6d09e203980f5f2df0183b794248ca3b261496e`。ZIP 顶层目录为 `DevOS-v4.98-beta-integration/`。这是已发布的原包，文档更新不改变包内字节。SHA-256 用来核对字节一致性，发布身份详见[构建收据](V498_BETA1_BUILD_RECEIPT.json)。
 
 ## 第一次使用
+
+给新用户介绍或转发时，可以直接分享[新用户介绍与上手指南](V498_BETA1_QUICKSTART.md)，其中包含用途、下载、校验、执行步骤和 Beta 边界。
 
 必要环境：macOS、Python 3.10+、Git、Godot 4.4。实际验证使用 Python 3.13.2；其他 Python 版本未逐版验证。把 ZIP 与校验文件放在同一目录，确保下面的解压目录、虚拟环境和项目目录尚不存在。
 
