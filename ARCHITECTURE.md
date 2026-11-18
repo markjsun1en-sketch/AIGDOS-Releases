@@ -98,6 +98,14 @@ DevOS-v4.98-beta-integration/
 
 本节沿着 **v4.98-beta.1 已发布代码**说明预期成功路径，不代表新执行了一轮测试或新增验收结果。请先按[快速上手](V498_BETA1_QUICKSTART.md)下载、核对 SHA-256 并安装依赖。
 
+### 时序：执行、审查与验收
+
+![run-request 时序：执行、状态与证据写入、独立审查和人工验收](docs/diagrams/run-request-sequence.zh.svg)
+
+[查看完整时序图（可编辑 SVG）](docs/diagrams/run-request-sequence.zh.svg)
+
+每个编号面板从上向下阅读。执行泳道合并表示候选入口及任务/Worker/Godot 适配器，下方模块表给出其准确文件。实线表示调用、读取或写入，虚线表示返回数据或结果；相关调用合并展示以便阅读。本图沿成功路径展开，并注明失败/返工结果。**独立审查和白板验收是明确进行的后续工作，不是 `run-request` 自动执行的下一步。** 实时运行状态、捕获的运行证据、白板记录与快照分别保存在各自位置，保留各自权威。
+
 ### 从有明确边界的请求开始
 
 在解包根目录检查 `tools/dev_os_candidate/examples/charge_meter.json`，再运行：

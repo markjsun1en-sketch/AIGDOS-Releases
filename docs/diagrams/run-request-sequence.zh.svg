@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="3335" viewBox="0 0 1440 3335" role="img" aria-labelledby="title desc">
+<title id="title">AIGDOS · run-request 时序图</title>
+<desc id="desc">蓄力计示例 · 执行成功 → 独立审查 → 人工验收. 实线：调用、读取或写入；虚线：返回的数据 / 结果。本图展示成功路径。 说明已发布行为，不代表新增测试结果。OBS65 / CAP16 继续阻断，不授予完整正式版本资格。</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#52708c"/></marker></defs>
+<rect x="0" y="0" width="1440" height="3335" fill="white"/>
+<g font-family="system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, sans-serif">
+<text x="32" y="48" font-size="32" fill="#192e45" font-weight="700" text-anchor="start">AIGDOS · run-request 时序图</text>
+<text x="32" y="84" font-size="21" fill="#526a82" font-weight="400" text-anchor="start">蓄力计示例 · 执行成功 → 独立审查 → 人工验收</text>
+<g id="execution"><rect x="20" y="128" width="1400" height="1370" rx="12" fill="#fbfcfe" stroke="#cfdae5"/>
+<text x="42" y="163" font-size="26" fill="#2e5685" font-weight="700" text-anchor="start">1 · 执行请求</text>
+<text x="42" y="194" font-size="17" fill="#5a6e83" font-weight="400" text-anchor="start">CLI 泳道合并表示 runtime.py 与任务、Worker、Godot 适配器。相关调用合并展示；时间向下推进。</text>
+<path d="M120 269 V1393" stroke="#bccbd9" stroke-width="1.5" stroke-dasharray="5 5"/>
+<rect x="20" y="212" width="200" height="58" rx="7" fill="#eef3fa" stroke="#bdcddd"/>
+<text x="120" y="247" font-size="20" fill="#243e5a" font-weight="650" text-anchor="middle">调用者 / 宿主</text>
+<path d="M360 269 V1393" stroke="#bccbd9" stroke-width="1.5" stroke-dasharray="5 5"/>
+<rect x="260" y="212" width="200" height="58" rx="7" fill="#eaf1fa" stroke="#bdcddd"/>
+<text x="360" y="247" font-size="20" fill="#243e5a" font-weight="650" text-anchor="middle">CLI + 适配器</text>
+<path d="M600 269 V1393" stroke="#bccbd9" stroke-width="1.5" stroke-dasharray="5 5"/>
+<rect x="500" y="212" width="200" height="58" rx="7" fill="#e9f6f5" stroke="#bdcddd"/>
+<text x="600" y="247" font-size="20" fill="#243e5a" font-weight="650" text-anchor="middle">v4.98 Pack</text>
+<path d="M840 269 V1393" stroke="#bccbd9" stroke-width="1.5" stroke-dasharray="5 5"/>
+<rect x="740" y="212" width="200" height="58" rx="7" fill="#eef2fa" stroke="#bdcddd"/>
+<text x="840" y="237" font-size="20" fill="#243e5a" font-weight="650" text-anchor="middle">OS State Service</text>
+<text x="840" y="260" font-size="16" fill="#51697e" font-weight="400" text-anchor="middle">项目实时 SQLite</text>
+<path d="M1080 269 V1393" stroke="#bccbd9" stroke-width="1.5" stroke-dasharray="5 5"/>
+<rect x="980" y="212" width="200" height="58" rx="7" fill="#fdf5e8" stroke="#bdcddd"/>
+<text x="1080" y="237" font-size="20" fill="#243e5a" font-weight="650" text-anchor="middle">Godot</text>
+<text x="1080" y="260" font-size="16" fill="#51697e" font-weight="400" text-anchor="middle">外部可执行程序</text>
+<path d="M1320 269 V1393" stroke="#bccbd9" stroke-width="1.5" stroke-dasharray="5 5"/>
+<rect x="1220" y="212" width="200" height="58" rx="7" fill="#edf6ee" stroke="#bdcddd"/>
+<text x="1320" y="237" font-size="20" fill="#243e5a" font-weight="650" text-anchor="middle">项目文件</text>
+<text x="1320" y="260" font-size="16" fill="#51697e" font-weight="400" text-anchor="middle">Git + evidence/</text>
+<path d="M120 330 H360" fill="none" stroke="#52708c" stroke-width="1.7" marker-end="url(#arrow)"/>
+<text x="240.0" y="298" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">run-request</text>
+<text x="240.0" y="318" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">已审阅请求与源码</text>
+<path d="M360 375 H398 V393 H360" fill="none" stroke="#52708c" stroke-width="1.7" marker-end="url(#arrow)"/>
+<text x="412" y="377" font-size="17" fill="#25354a" font-weight="400" text-anchor="start">校验；doctor</text>
+<text x="412" y="398" font-size="17" fill="#25354a" font-weight="400" text-anchor="start">包与宿主工具</text>
+<path d="M360 440 H1320" fill="none" stroke="#52708c" stroke-width="1.7" marker-end="url(#arrow)"/>
+<text x="840.0" y="428" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">保存请求、脚手架、绑定标记与 doctor.json</text>
+<path d="M360 495 H600" fill="none" stroke="#52708c" stroke-width="1.7" marker-end="url(#arrow)"/>
+<text x="480.0" y="463" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">layout_budget.py</text>
+<text x="480.0" y="483" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">axis_budget</text>
+<path d="M600 550 H360" fill="none" stroke="#52708c" stroke-width="1.7" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="480.0" y="538" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">返回布局结果：196 px</text>
+<path d="M360 605 H1320" fill="none" stroke="#52708c" stroke-width="1.7" marker-end="url(#arrow)"/>
+<text x="840.0" y="593" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">写入布局数据与 layout-tool.json；提交输入文件</text>
+<path d="M360 660 H840" fill="none" stroke="#52708c" stroke-width="1.7" marker-end="url(#arrow)"/>
+<text x="600.0" y="628" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">在不同进程中创建 / 恢复任务</text>
+<text x="600.0" y="648" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">持久化 IN_PROGRESS、参与者与历史</text>
+<path d="M360 715 H1320" fill="none" stroke="#52708c" stroke-width="1.7" marker-end="url(#arrow)"/>
+<text x="840.0" y="703" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">保存 task-created.json 和 task-resumed.json</text>
+<path d="M360 770 H600" fill="none" stroke="#52708c" stroke-width="1.7" marker-end="url(#arrow)"/>
+<text x="480.0" y="738" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">Worker 加载功能</text>
+<text x="480.0" y="758" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">Agent 与 Skill 契约</text>
+<path d="M600 825 H360" fill="none" stroke="#52708c" stroke-width="1.7" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="480.0" y="813" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">返回功能契约</text>
+<path d="M360 880 H1320" fill="none" stroke="#52708c" stroke-width="1.7" marker-end="url(#arrow)"/>
+<text x="840.0" y="868" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">保存 worker-preflight.json；工具绑定由基座适配器提供</text>
+<path d="M360 935 H840" fill="none" stroke="#52708c" stroke-width="1.7" marker-end="url(#arrow)"/>
+<text x="600.0" y="923" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">发布源码前登记实际写入者</text>
+<path d="M360 990 H1320" fill="none" stroke="#52708c" stroke-width="1.7" marker-end="url(#arrow)"/>
+<text x="840.0" y="978" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">写入声明的源码；将文件哈希保存到 writes.json</text>
+<path d="M360 1045 H1080" fill="none" stroke="#52708c" stroke-width="1.7" marker-end="url(#arrow)"/>
+<text x="720.0" y="1033" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">导入 / 加载项目，再执行 tests/check.gd</text>
+<path d="M1080 1100 H360" fill="none" stroke="#52708c" stroke-width="1.7" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="720.0" y="1088" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">返回实际结果、日志与通过标记观察</text>
+<path d="M360 1155 H1320" fill="none" stroke="#52708c" stroke-width="1.7" marker-end="url(#arrow)"/>
+<text x="840.0" y="1143" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">保存 godot-load.json、godot-smoke.json；提交实现</text>
+<path d="M360 1210 H840" fill="none" stroke="#52708c" stroke-width="1.7" marker-end="url(#arrow)"/>
+<text x="600.0" y="1178" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">绑定提交与证据引用声明完成，再发出交接</text>
+<text x="600.0" y="1198" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">CLAIMED_DONE；交给 candidate-independent-review</text>
+<path d="M840 1265 H360" fill="none" stroke="#52708c" stroke-width="1.7" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="600.0" y="1253" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">返回完成声明与指定交接</text>
+<path d="M360 1320 H1320" fill="none" stroke="#52708c" stroke-width="1.7" marker-end="url(#arrow)"/>
+<text x="840.0" y="1308" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">保存 task-claim.json、review-handoff.json 和 result.json</text>
+<path d="M360 1375 H120" fill="none" stroke="#52708c" stroke-width="1.7" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="240.0" y="1343" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">PASS；审查 PENDING</text>
+<text x="240.0" y="1363" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">human_acceptance: false</text>
+<text x="42" y="1425" font-size="16" fill="#54687e" font-weight="400" text-anchor="start">实时状态：project/.ai_dev_os/development/runtime_state/runtime-state.development.sqlite3</text>
+<text x="42" y="1448" font-size="16" fill="#54687e" font-weight="400" text-anchor="start">捕获证据：&lt;run&gt;/evidence/；后来完成审查，也不会改写 result.json 中原有的运行结果。</text>
+<text x="42" y="1471" font-size="16" fill="#54687e" font-weight="400" text-anchor="start">捕获执行失败时：保留工作区并写 failure.json；早期拒绝可能发生在工作区创建之前。</text>
+</g>
+<g id="review"><rect x="20" y="1526" width="1400" height="930" rx="12" fill="#fbfcfe" stroke="#cfdae5"/>
+<text x="42" y="1561" font-size="26" fill="#2e5685" font-weight="700" text-anchor="start">2 · 独立审查——单独进行的后续工作</text>
+<text x="42" y="1592" font-size="17" fill="#5a6e83" font-weight="400" text-anchor="start">指定审查者核对真实实现与证据，再提交结论。本面板展示 PASS 路径。</text>
+<path d="M170 1667 V2351" stroke="#bccbd9" stroke-width="1.5" stroke-dasharray="5 5"/>
+<rect x="20" y="1610" width="300" height="58" rx="7" fill="#f3eef8" stroke="#bdcddd"/>
+<text x="170" y="1645" font-size="20" fill="#243e5a" font-weight="650" text-anchor="middle">独立审查者</text>
+<path d="M535 1667 V2351" stroke="#bccbd9" stroke-width="1.5" stroke-dasharray="5 5"/>
+<rect x="385" y="1610" width="300" height="58" rx="7" fill="#eaf1fa" stroke="#bdcddd"/>
+<text x="535" y="1635" font-size="20" fill="#243e5a" font-weight="650" text-anchor="middle">review CLI</text>
+<text x="535" y="1658" font-size="16" fill="#51697e" font-weight="400" text-anchor="middle">任务 / 审查适配器</text>
+<path d="M900 1667 V2351" stroke="#bccbd9" stroke-width="1.5" stroke-dasharray="5 5"/>
+<rect x="750" y="1610" width="300" height="58" rx="7" fill="#eef2fa" stroke="#bdcddd"/>
+<text x="900" y="1635" font-size="20" fill="#243e5a" font-weight="650" text-anchor="middle">OS State Service</text>
+<text x="900" y="1658" font-size="16" fill="#51697e" font-weight="400" text-anchor="middle">同一个实时 SQLite</text>
+<path d="M1265 1667 V2351" stroke="#bccbd9" stroke-width="1.5" stroke-dasharray="5 5"/>
+<rect x="1115" y="1610" width="300" height="58" rx="7" fill="#edf6ee" stroke="#bdcddd"/>
+<text x="1265" y="1635" font-size="20" fill="#243e5a" font-weight="650" text-anchor="middle">项目与运行文件</text>
+<text x="1265" y="1658" font-size="16" fill="#51697e" font-weight="400" text-anchor="middle">源码、Git、证据、审查</text>
+<path d="M170 1728 H535" fill="none" stroke="#52708c" stroke-width="1.7" marker-end="url(#arrow)"/>
+<text x="352.5" y="1696" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">queue；accept-handoff</text>
+<text x="352.5" y="1716" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">使用真实任务与交接 ID</text>
+<path d="M535 1783 H900" fill="none" stroke="#52708c" stroke-width="1.7" marker-end="url(#arrow)"/>
+<text x="717.5" y="1751" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">检查独立性与指定接收者</text>
+<text x="717.5" y="1771" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">接收审查交接</text>
+<path d="M900 1838 H535" fill="none" stroke="#52708c" stroke-width="1.7" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="717.5" y="1826" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">当前任务、交接及提交绑定</text>
+<path d="M535 1893 H170" fill="none" stroke="#52708c" stroke-width="1.7" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="352.5" y="1881" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">返回指定审查上下文</text>
+<path d="M170 1948 H1265" fill="none" stroke="#52708c" stroke-width="1.7" marker-end="url(#arrow)"/>
+<text x="717.5" y="1936" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">核对实际实现提交、源码、布局与 Godot 证据</text>
+<path d="M1265 2003 H170" fill="none" stroke="#52708c" stroke-width="1.7" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="717.5" y="1991" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">读取真实产物与命令结果</text>
+<path d="M170 2058 H1265" fill="none" stroke="#52708c" stroke-width="1.7" marker-end="url(#arrow)"/>
+<text x="717.5" y="2046" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">补做必要检查；将真实发现写入 review/review.md</text>
+<path d="M170 2113 H535" fill="none" stroke="#52708c" stroke-width="1.7" marker-end="url(#arrow)"/>
+<text x="352.5" y="2081" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">complete-handoff：附 output_refs</text>
+<text x="352.5" y="2101" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">再用 reviewed_commit 提交 pass</text>
+<path d="M535 2168 H900" fill="none" stroke="#52708c" stroke-width="1.7" marker-end="url(#arrow)"/>
+<text x="717.5" y="2136" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">持久化交接完成；执行审查门禁</text>
+<text x="717.5" y="2156" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">CLAIMED_DONE → VERIFIED → CLOSED</text>
+<path d="M900 2223 H535" fill="none" stroke="#52708c" stroke-width="1.7" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="717.5" y="2211" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">返回绑定提交的 CLOSED 记录</text>
+<path d="M535 2278 H170" fill="none" stroke="#52708c" stroke-width="1.7" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="352.5" y="2266" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">返回审查 / 关闭结果</text>
+<path d="M170 2333 H1265" fill="none" stroke="#52708c" stroke-width="1.7" marker-end="url(#arrow)"/>
+<text x="717.5" y="2321" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">保留真实审查与关闭输出，供后续验收使用</text>
+<text x="42" y="2383" font-size="16" fill="#54687e" font-weight="400" text-anchor="start">PASS 要求参与者独立、提交绑定一致且没有未完成交接；通过独立审查不等于人工验收。</text>
+<text x="42" y="2406" font-size="16" fill="#54687e" font-weight="400" text-anchor="start">reject 将运行时任务退回 IN_PROGRESS；审查状态变化不能修改工作产物。</text>
+<text x="42" y="2429" font-size="16" fill="#54687e" font-weight="400" text-anchor="start">review/review.md 与保存的关闭输出由审查者建立，不是 run-request 自动生成的文件。</text>
+</g>
+<g id="acceptance"><rect x="20" y="2484" width="1400" height="765" rx="12" fill="#fbfcfe" stroke="#cfdae5"/>
+<text x="42" y="2519" font-size="26" fill="#2e5685" font-weight="700" text-anchor="start">3 · 人工验收——单独建立的白板任务</text>
+<text x="42" y="2550" font-size="17" fill="#5a6e83" font-weight="400" text-anchor="start">白板根目录为 &lt;run&gt;/project。共享任务由宿主明确准备，不会从运行时自动导入。</text>
+<path d="M170 2625 V3144" stroke="#bccbd9" stroke-width="1.5" stroke-dasharray="5 5"/>
+<rect x="20" y="2568" width="300" height="58" rx="7" fill="#f3eef8" stroke="#bdcddd"/>
+<text x="170" y="2603" font-size="20" fill="#243e5a" font-weight="650" text-anchor="middle">宿主 / 任务准备者</text>
+<path d="M535 2625 V3144" stroke="#bccbd9" stroke-width="1.5" stroke-dasharray="5 5"/>
+<rect x="385" y="2568" width="300" height="58" rx="7" fill="#eaf1fa" stroke="#bdcddd"/>
+<text x="535" y="2593" font-size="20" fill="#243e5a" font-weight="650" text-anchor="middle">Whiteboard</text>
+<text x="535" y="2616" font-size="16" fill="#51697e" font-weight="400" text-anchor="middle">界面 + 共享任务服务</text>
+<path d="M900 2625 V3144" stroke="#bccbd9" stroke-width="1.5" stroke-dasharray="5 5"/>
+<rect x="750" y="2568" width="300" height="58" rx="7" fill="#eef2fa" stroke="#bdcddd"/>
+<text x="900" y="2593" font-size="20" fill="#243e5a" font-weight="650" text-anchor="middle">白板文件</text>
+<text x="900" y="2616" font-size="16" fill="#51697e" font-weight="400" text-anchor="middle">证据 + 快照</text>
+<path d="M1265 2625 V3144" stroke="#bccbd9" stroke-width="1.5" stroke-dasharray="5 5"/>
+<rect x="1115" y="2568" width="300" height="58" rx="7" fill="#edf6ee" stroke="#bdcddd"/>
+<text x="1265" y="2603" font-size="20" fill="#243e5a" font-weight="650" text-anchor="middle">人工负责人</text>
+<path d="M170 2686 H900" fill="none" stroke="#52708c" stroke-width="1.7" marker-end="url(#arrow)"/>
+<text x="535.0" y="2654" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">保留原件；将选定报告 / 审查输出按原字节复制到项目内</text>
+<text x="535.0" y="2674" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">例如 docs/acceptance/charge-meter/；保留提交与哈希绑定</text>
+<path d="M170 2741 H535" fill="none" stroke="#52708c" stroke-width="1.7" marker-end="url(#arrow)"/>
+<text x="352.5" y="2709" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">创建 / 开始 / 声明共享任务完成</text>
+<text x="352.5" y="2729" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">验收条件 + 运行时 / 证据引用</text>
+<path d="M535 2796 H900" fill="none" stroke="#52708c" stroke-width="1.7" marker-end="url(#arrow)"/>
+<text x="717.5" y="2764" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">计算明确证据的哈希；保存</text>
+<text x="717.5" y="2784" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">claimed_done 与证据快照</text>
+<path d="M535 2851 H1265" fill="none" stroke="#52708c" stroke-width="1.7" marker-end="url(#arrow)"/>
+<text x="900.0" y="2839" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">展示约定条件与绑定证据</text>
+<path d="M1265 2906 H535" fill="none" stroke="#52708c" stroke-width="1.7" marker-end="url(#arrow)"/>
+<text x="900.0" y="2894" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">检查证据；逐项勾选全部条件；确认验收</text>
+<path d="M535 2961 H900" fill="none" stroke="#52708c" stroke-width="1.7" marker-end="url(#arrow)"/>
+<text x="717.5" y="2929" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">核验依据；保存 accepted</text>
+<text x="717.5" y="2949" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">人工确认与快照绑定</text>
+<path d="M535 3016 H900" fill="none" stroke="#52708c" stroke-width="1.7" marker-end="url(#arrow)"/>
+<text x="717.5" y="3004" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">回读已保存的任务</text>
+<path d="M900 3071 H535" fill="none" stroke="#52708c" stroke-width="1.7" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="717.5" y="3059" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">返回记录、版本与哈希</text>
+<path d="M535 3126 H1265" fill="none" stroke="#52708c" stroke-width="1.7" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="900.0" y="3114" font-size="17" fill="#25354a" font-weight="400" text-anchor="middle">显示已核实的验收结果</text>
+<text x="42" y="3176" font-size="16" fill="#54687e" font-weight="400" text-anchor="start">项目内记录：.dev_os_meta/project_board/tasks/；evidence_snapshots/ 与 tasks/ 同级。</text>
+<text x="42" y="3199" font-size="16" fill="#54687e" font-weight="400" text-anchor="start">白板 accepted 与运行时 CLOSED 是两个状态；人工退回会使白板任务回到 in_progress。</text>
+<text x="42" y="3222" font-size="16" fill="#54687e" font-weight="400" text-anchor="start">分别检查 confirmation_current 与 workspace_matches_evidence；Console 刷新不代表验收。</text>
+</g>
+<text x="32" y="3289" font-size="17" fill="#526a82" font-weight="400" text-anchor="start">实线：调用、读取或写入；虚线：返回的数据 / 结果。本图展示成功路径。</text>
+<text x="32" y="3314" font-size="17" fill="#526a82" font-weight="400" text-anchor="start">说明已发布行为，不代表新增测试结果。OBS65 / CAP16 继续阻断，不授予完整正式版本资格。</text>
+</g></svg>

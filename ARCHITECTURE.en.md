@@ -98,6 +98,14 @@ The separate [delivery flow](AIGDOS_CAPABILITIES.en.md#delivery-flow) explains w
 
 This walkthrough traces the **code shipped in v4.98-beta.1**. It describes the expected successful path, not a newly executed test or a new acceptance result. Use the [quick start](V498_BETA1_QUICKSTART.en.md) to download, check SHA-256, and install dependencies first.
 
+### Sequence: execution, review, and acceptance
+
+![run-request sequence showing execution, state and evidence writes, independent review, and human acceptance](docs/diagrams/run-request-sequence.en.svg)
+
+[Open the full-size sequence diagram (editable SVG)](docs/diagrams/run-request-sequence.en.svg)
+
+Read each numbered panel from top to bottom. The execution lane combines the candidate entry and task/Worker/Godot adapters; the module table below identifies their exact files. Solid arrows are calls, reads, or writes; dashed arrows return data or results. Related calls are grouped for readability. The diagram follows the successful path and notes failure/rework outcomes. **Review and Whiteboard acceptance are explicit follow-up work, not automatic continuations of `run-request`.** Live runtime state, captured run evidence, and Whiteboard records/snapshots retain separate locations and authority.
+
 ### Start with a bounded request
 
 From the extracted package root, inspect `tools/dev_os_candidate/examples/charge_meter.json`, then run:
