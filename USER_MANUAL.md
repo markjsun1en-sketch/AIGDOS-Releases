@@ -1,3 +1,5 @@
+> 历史手册：本文件描述 v4.93，不作为 v4.98-beta.1 的安装或能力承诺。新用户请先读 [AIGDOS 首页](README.md)、[当前能力说明](AIGDOS_CAPABILITIES.md)和[Beta 下载与上手](V498_BETA1_RELEASE_NOTES.md)。以下保留原文。
+
 # AI Game Dev OS v4.93 User Manual
 
 这份手册面向当前 `AI_Game_Dev_OS_v4.93/` 的个人使用和 AI IDE 接入方式。
