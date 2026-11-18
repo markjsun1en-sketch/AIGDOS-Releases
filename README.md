@@ -13,10 +13,14 @@
 在 Codex 中粘贴下面这段，即可发起 **macOS 全新 Godot 项目**的安装配置：
 
 ```text
-请按快速指南，为 macOS 上的全新 Godot 项目配置 AIGDOS v4.98-beta.1。
-分发仓库：https://github.com/markjsun1en-sketch/AIGDOS-Releases
+请按快速指南，为 macOS 上的全新 Godot 项目
+配置 AIGDOS v4.98-beta.1。
+分发仓库：
+https://github.com/markjsun1en-sketch/AIGDOS-Releases
+
 校验 ZIP 的 SHA-256，准备依赖并加载 Codex 项目指令。
-doctor --profile godot 通过后，在开发包之外的全新目录运行示例。
+doctor --profile godot 通过后，
+在开发包之外的全新目录运行示例。
 保留已有项目、安装和未提交改动，保持开发包内容不变。
 ```
 

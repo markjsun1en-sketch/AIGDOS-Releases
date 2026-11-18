@@ -13,11 +13,16 @@ This is the public distribution repository. The current public development packa
 Paste this prompt into Codex to start setup for a **new Godot project on macOS**:
 
 ```text
-Set up AIGDOS v4.98-beta.1 for a new Godot project on macOS using the quick-start guide.
-Release repository: https://github.com/markjsun1en-sketch/AIGDOS-Releases
-Verify the ZIP's SHA-256, prepare dependencies, and load the Codex project instructions.
-After doctor --profile godot passes, run the example in a new directory outside the package.
-Preserve existing projects, installations, and uncommitted changes. Keep the package payload unchanged.
+Set up AIGDOS v4.98-beta.1 for a new Godot project on macOS.
+Follow the quick-start guide in this release repository:
+https://github.com/markjsun1en-sketch/AIGDOS-Releases
+
+Verify the ZIP's SHA-256, prepare dependencies, and load
+the Codex project instructions.
+After doctor --profile godot passes, run the example in a
+new directory outside the development package.
+Preserve existing projects, installations, and uncommitted
+changes. Keep the package payload unchanged.
 ```
 
 [Full setup prompt and instructions](V498_BETA1_QUICKSTART.en.md#copyable-prompt-for-a-fresh-setup). For an existing project or older installation, start with an [update assessment](V498_BETA1_QUICKSTART.en.md#copyable-prompt-for-an-existing-project-update-assessment); this Beta has no general-purpose updater.
