@@ -20,27 +20,9 @@
 
 ## Dev OS 架构
 
-```mermaid
-flowchart TB
-    Human["人 / 项目负责人<br/>目标、授权、人工验收"] --> Host["AI 宿主<br/>理解、设计、编码、工具调用"]
-    subgraph Package["AIGDOS 完整开发包"]
-        Entry["dev_os.py<br/>检查、执行、任务、审查、记忆与导出入口"]
-        Base["固定 v4.97 基座<br/>State Service、运行时、适配器、基础生产包与构建器"]
-        Delta["v4.98 增量<br/>GDD / CoFlow、技能契约、美术与有界观察工具"]
-        Console["项目 Console<br/>Whiteboard / Runtime Graph / Game Map"]
-        Entry --> Base
-        Entry --> Delta
-    end
-    Host --> Entry
-    Host -->|读取方法并执行| Delta
-    Host --> External["外部工具<br/>Godot / Git / 图像生成与处理"]
-    Entry -->|按所选入口调用| External
-    Base -->|项目运行时与写入| Project["包外项目与工作区<br/>源码、场景、资源、任务状态、Git、执行证据"]
-    Delta -.->|宿主将产物用于项目| Project
-    External -->|运行结果与产物| Project
-    Project -->|读取记录与静态结构| Console
-    Entry -.->|显式捕获 / 查询| Memory["包外 LTM 语料<br/>不可变修订与隔离记录"]
-```
+![AIGDOS 开发架构：AI 宿主、完整开发包、外部工具、包外项目与记忆](docs/diagrams/architecture.zh.svg)
+
+[查看 SVG 原图](docs/diagrams/architecture.zh.svg) · [Mermaid 源文件](docs/diagrams/architecture.zh.mmd)
 
 箭头表示调用或数据关系，不授予权限，也不表示所有模块自动运行。固定基座提供任务运行时，v4.98 增量补充方法与工具；项目状态和用户记忆保存在包外。Console 展示记录，任务关闭和人工接受仍由原入口分别办理。交付中的检查、独立审查与接受关系见[能力说明中的流程图](AIGDOS_CAPABILITIES.md#交付流程)。
 

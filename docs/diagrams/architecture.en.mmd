@@ -1,0 +1,20 @@
+%%{init: {"theme":"neutral","htmlLabels":false,"flowchart":{"htmlLabels":false,"curve":"linear","nodeSpacing":28,"rankSpacing":44}}}%%
+flowchart TB
+    Human["Human / project owner<br/>Goals, authorization, human acceptance"] --> Host["AI host<br/>Reasoning, design, coding, tool calls"]
+    subgraph Package["Complete AIGDOS development package"]
+        Entry["dev_os.py<br/>Checks, execution, tasks, review, memory, exports"]
+        Base["Fixed v4.97 base<br/>State Service, runtime, adapters, base packs and builder"]
+        Delta["v4.98 additions<br/>GDD / CoFlow, skill contracts, art and bounded observation tools"]
+        Console["Project Console<br/>Whiteboard / Runtime Graph / Game Map"]
+        Entry --> Base
+        Entry --> Delta
+    end
+    Host --> Entry
+    Host -->|Read methods and execute| Delta
+    Host --> External["External tools<br/>Godot / Git / image generation and processing"]
+    Entry -->|Invoke through selected entries| External
+    Base -->|Project runtime and writes| Project["External project and workspace<br/>Source, scenes, assets, task state, Git, execution evidence"]
+    Delta -.->|Host applies artifacts to project| Project
+    External -->|Execution results and artifacts| Project
+    Project -->|Read records and static structure| Console
+    Entry -.->|Explicit capture / query| Memory["External LTM corpus<br/>Immutable revisions and quarantine records"]

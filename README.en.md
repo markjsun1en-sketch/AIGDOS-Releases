@@ -20,27 +20,9 @@ It is intended for independent developers, small teams, game designers, and tech
 
 ## Dev OS architecture
 
-```mermaid
-flowchart TB
-    Human["Human / project owner<br/>Goals, authorization, human acceptance"] --> Host["AI host<br/>Reasoning, design, coding, tool calls"]
-    subgraph Package["Complete AIGDOS development package"]
-        Entry["dev_os.py<br/>Checks, execution, tasks, review, memory, exports"]
-        Base["Fixed v4.97 base<br/>State Service, runtime, adapters, base packs and builder"]
-        Delta["v4.98 additions<br/>GDD / CoFlow, skill contracts, art and bounded observation tools"]
-        Console["Project Console<br/>Whiteboard / Runtime Graph / Game Map"]
-        Entry --> Base
-        Entry --> Delta
-    end
-    Host --> Entry
-    Host -->|Read methods and execute| Delta
-    Host --> External["External tools<br/>Godot / Git / image generation and processing"]
-    Entry -->|Invoke through selected entries| External
-    Base -->|Project runtime and writes| Project["External project and workspace<br/>Source, scenes, assets, task state, Git, execution evidence"]
-    Delta -.->|Host applies artifacts to project| Project
-    External -->|Execution results and artifacts| Project
-    Project -->|Read records and static structure| Console
-    Entry -.->|Explicit capture / query| Memory["External LTM corpus<br/>Immutable revisions and quarantine records"]
-```
+![AIGDOS architecture: AI host, development package, external tools, external project and memory](docs/diagrams/architecture.en.svg)
+
+[Open SVG](docs/diagrams/architecture.en.svg) · [Mermaid source](docs/diagrams/architecture.en.mmd)
 
 Arrows show calls or data relationships. They grant no permissions and do not mean every module runs automatically. The fixed base supplies the task runtime; the v4.98 additions supply methods and tools. Project state and user memory remain outside the package. Console displays records; task closure and human acceptance are still handled separately through their original entries. See the [delivery flow in the capability guide](AIGDOS_CAPABILITIES.en.md#delivery-flow) for the relationship between checks, independent review, and acceptance.
 

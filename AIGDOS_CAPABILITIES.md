@@ -62,20 +62,9 @@ DevOS-v4.98-beta-integration/
 
 ### 交付流程
 
-```mermaid
-flowchart TB
-    Intent["需求与验收条件"] --> Plan["人和 AI 宿主<br/>设计、规格、任务与执行输入"]
-    Plan --> Work["受约束实现<br/>代码、场景、数据与美术"]
-    Work --> Checks["适用检查与证据<br/>导入、玩法、导出、GUI 等"]
-    Checks -->|满足所需检查与声明门禁| Claim["CLAIMED_DONE<br/>执行者声明完成，独立审查待办"]
-    Claim --> Handoff["独立审查者<br/>接受并完成交接，核对源码提交与证据"]
-    Handoff --> Review{"独立审查结论"}
-    Review -->|通过且关闭条件满足| Closed["运行时任务关闭"]
-    Review -->|退回| Rework["按任务规则安排返工"]
-    Rework --> Work
-    Closed --> Human["白板人工验收<br/>人确认具体条件与范围"]
-    Human -->|接受| Accepted["已接受的限定范围<br/>不自动取得完整版本发布资格"]
-```
+![AIGDOS 交付流程：需求、实现、检查、独立审查与人工验收](docs/diagrams/delivery-flow.zh.svg)
+
+[查看 SVG 原图](docs/diagrams/delivery-flow.zh.svg) · [Mermaid 源文件](docs/diagrams/delivery-flow.zh.mmd)
 
 这是交付顺序概览：缺项或失败不能自动进入完成声明，未完成交接阻断关闭。`run-request` 只推进到 `CLAIMED_DONE`；之后的独立审查、任务关闭和人工接受仍需各自执行。运行时任务与白板验收是不同的状态记录；发布资格另行判断。
 

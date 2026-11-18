@@ -62,20 +62,9 @@ See the [architecture diagram on the home page](README.en.md#dev-os-architecture
 
 ### Delivery flow
 
-```mermaid
-flowchart TB
-    Intent["Requirements and acceptance criteria"] --> Plan["Human and AI host<br/>Design, specifications, tasks, execution inputs"]
-    Plan --> Work["Scoped implementation<br/>Code, scenes, data, and art"]
-    Work --> Checks["Applicable checks and evidence<br/>Import, gameplay, export, GUI, etc."]
-    Checks -->|Required checks and claim gates satisfied| Claim["CLAIMED_DONE<br/>Executor claims completion; independent review pending"]
-    Claim --> Handoff["Independent reviewer<br/>Accept and complete handoff; inspect source commit and evidence"]
-    Handoff --> Review{"Independent review verdict"}
-    Review -->|Pass and closure conditions met| Closed["Runtime task closed"]
-    Review -->|Reject| Rework["Arrange rework through task rules"]
-    Rework --> Work
-    Closed --> Human["Human acceptance in Whiteboard<br/>Confirm specific criteria and scope"]
-    Human -->|Accept| Accepted["Bounded scope accepted<br/>No automatic full-release qualification"]
-```
+![AIGDOS delivery flow: requirements, implementation, checks, independent review and human acceptance](docs/diagrams/delivery-flow.en.svg)
+
+[Open SVG](docs/diagrams/delivery-flow.en.svg) · [Mermaid source](docs/diagrams/delivery-flow.en.mmd)
 
 This is a delivery-order overview: missing or failed checks do not automatically permit a completion claim, and open handoffs block closure. `run-request` stops at `CLAIMED_DONE`; independent review, task closure, and human acceptance must still be performed separately. Runtime tasks and Whiteboard acceptance are different state records. Release qualification is a separate decision.
 
