@@ -4,6 +4,8 @@
 
 Released on November 18, 2026, this version distributes the development package that passed the second validation iteration. Its public version is `v4.98-beta.1`; “second” refers to the validation iteration, not a beta.2 version.
 
+**Release freeze (November 18, 2026):** the current Beta package and distribution documentation are pinned by the `v4.98-beta.1` tag. See the [seal record](V498_BETA1_SEAL.en.md). The original package, build receipt, and existing acceptance evidence are unchanged. This freeze adds no new product validation or full formal-release qualification.
+
 Start with the [purpose and overview](README.en.md). The [full capability guide](AIGDOS_CAPABILITIES.en.md) covers functional areas, all 53 public skills, host responsibilities, and validation limits.
 
 For a page you can share directly with new users, use the [introduction and quick start](V498_BETA1_QUICKSTART.en.md).

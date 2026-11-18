@@ -6,6 +6,8 @@
 
 This is the public distribution repository. The current public development package is **v4.98-beta.1**, released on **November 18, 2026**, for **new Godot projects on macOS**.
 
+**Release freeze: v4.98-beta.1 was sealed on November 18, 2026.** [Seal record](V498_BETA1_SEAL.en.md) · [Pinned distribution snapshot](https://github.com/markjsun1en-sketch/AIGDOS-Releases/tree/v4.98-beta.1). The original ZIP is unchanged. OBS65 and CAP16 remain blocked; full formal-release qualification has not been granted.
+
 [Download the complete Beta package](https://raw.githubusercontent.com/markjsun1en-sketch/AIGDOS-Releases/main/DevOS-v4.98-beta.1-candidate.zip) · [Quick start](V498_BETA1_QUICKSTART.en.md) · [Full capability guide](AIGDOS_CAPABILITIES.en.md) · [Release notes](V498_BETA1_RELEASE_NOTES.en.md) · [Build receipt](V498_BETA1_BUILD_RECEIPT.json) · [MIT License](LICENSE)
 
 New-project setup prompts: [Codex](#new-project-copy-this-into-codex) · [Cursor](#new-project-copy-this-into-cursor) · [WorkBuddy](#new-project-copy-this-into-workbuddy)
