@@ -1,5 +1,7 @@
 # AIGDOS v4.98-beta.1 — Beta 版本说明
 
+**中文** | [English](V498_BETA1_RELEASE_NOTES.en.md)
+
 本版本发布于 2026-11-18，对应第二轮验证通过的开发包。公开版本名为 `v4.98-beta.1`；“第二轮”指验证轮次。
 
 首次了解 AIGDOS，请先读[用途与能力总览](README.md)；完整的功能分类、53 项公开技能、宿主分工与验证边界见[能力说明](AIGDOS_CAPABILITIES.md)。

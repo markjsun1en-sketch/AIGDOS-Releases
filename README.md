@@ -1,5 +1,7 @@
 # AIGDOS — AI Game Dev OS
 
+**中文** | [English](README.en.md)
+
 **AIGDOS 是一套配合 AI 编程助手使用的游戏开发工作框架。** 它把游戏想法、设计文档、任务、代码与资源、测试证据、独立审查和人工验收连接起来，让开发过程可以继续推进、追溯和检查。
 
 这里是 AIGDOS 的公开分发仓库。当前公开开发包为 **v4.98-beta.1**，面向 **macOS 上的全新 Godot 项目**，发布于 2026-11-18。
@@ -15,6 +17,32 @@
 适合希望与 AI 长期协作的独立开发者、小团队、游戏策划和技术负责人，也适合需要检查任务进度与交付依据的项目负责人。
 
 名称中的 **OS** 指开发工作体系。AIGDOS 运行在你的操作系统和 AI 宿主之上：Godot 运行游戏，AI 宿主负责理解、创作、编码与调用工具，AIGDOS 提供工作约束、状态与验证入口。模型、引擎和图像生成服务需要另行准备。
+
+## Dev OS 架构
+
+```mermaid
+flowchart TB
+    Human["人 / 项目负责人<br/>目标、授权、人工验收"] --> Host["AI 宿主<br/>理解、设计、编码、工具调用"]
+    subgraph Package["AIGDOS 完整开发包"]
+        Entry["dev_os.py<br/>检查、执行、任务、审查、记忆与导出入口"]
+        Base["固定 v4.97 基座<br/>State Service、运行时、适配器、基础生产包与构建器"]
+        Delta["v4.98 增量<br/>GDD / CoFlow、技能契约、美术与有界观察工具"]
+        Console["项目 Console<br/>Whiteboard / Runtime Graph / Game Map"]
+        Entry --> Base
+        Entry --> Delta
+    end
+    Host --> Entry
+    Host -->|读取方法并执行| Delta
+    Host --> External["外部工具<br/>Godot / Git / 图像生成与处理"]
+    Entry -->|按所选入口调用| External
+    Base -->|项目运行时与写入| Project["包外项目与工作区<br/>源码、场景、资源、任务状态、Git、执行证据"]
+    Delta -.->|宿主将产物用于项目| Project
+    External -->|运行结果与产物| Project
+    Project -->|读取记录与静态结构| Console
+    Entry -.->|显式捕获 / 查询| Memory["包外 LTM 语料<br/>不可变修订与隔离记录"]
+```
+
+箭头表示调用或数据关系，不授予权限，也不表示所有模块自动运行。固定基座提供任务运行时，v4.98 增量补充方法与工具；项目状态和用户记忆保存在包外。Console 展示记录，任务关闭和人工接受仍由原入口分别办理。交付中的检查、独立审查与接受关系见[能力说明中的流程图](AIGDOS_CAPABILITIES.md#交付流程)。
 
 ## 能力概览
 
