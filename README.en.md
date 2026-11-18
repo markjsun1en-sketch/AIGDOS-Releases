@@ -26,6 +26,8 @@ Read the architecture in separate views: **L1–L6 are logical responsibility la
 
 [Layer responsibilities, OS / Pack mapping, and package layout](ARCHITECTURE.en.md) · [Open the full-size layer diagram](docs/diagrams/layers.en.svg)
 
+For the module-level view, see the [OS / Pack diagram and adapter-to-project connections](ARCHITECTURE.en.md#os--pack-modules-and-runtime).
+
 <details>
 <summary>Expand execution and data flow (component relationships, not logical layers)</summary>
 

@@ -29,6 +29,21 @@ These are **responsibility layers**, not six services, processes, or directories
 
 The physical split separates reusable OS foundations, game-production capability, host/engine integration, and project data. It is not a one-to-one mapping to L1–L6.
 
+### OS / Pack modules and runtime
+
+![OS and Pack modules connected to adapters, external tools, project runtime, and Console](docs/diagrams/os-pack-runtime.en.svg)
+
+[Open the full-size OS / Pack diagram](docs/diagrams/os-pack-runtime.en.svg)
+
+Read the connections as follows:
+
+1. **OS → Pack:** shared contracts, schemas, and base capability providers support game-specific production methods. The module groups summarize responsibilities within the physical directories; each box is not a separate service.
+2. **OS / Pack → adapter integration:** adapters use OS contracts and runtime APIs together with selected Pack skills, workflows, and validators. The candidate entry, host/engine adapters, and production composition are selectable integration surfaces; not every command traverses all three.
+3. **Adapters → project runtime and tools:** explicit bindings direct scoped writes and tool calls. Source, task state, handoffs, traces, and evidence belong to the selected project or artifact root outside the package. Godot, Git, and image tools are provided separately.
+4. **Project → checks and views:** state and evidence return through the selected integration/validation entries. Console reads records and static structure. Neither a view nor a successful check substitutes for independent review or human acceptance.
+
+The diagram combines the fixed base and selected v4.98 additions by responsibility. In particular, the current production methods and Art Pipeline Kit are in the v4.98 Pack area; the fixed base still supplies the task runtime and inherited providers. User LTM uses an explicit external corpus. OBS65 and CAP16 remain blocked.
+
 | Physical area | What it contains | Relationship to the logical layers |
 | --- | --- | --- |
 | `os_layer/` | Control-plane contracts, Orchestrator/governance foundations, runtime and database surfaces, memory policies, capability protocols, OS skills, and observation foundations | Supplies control/governance and shared runtime/evidence foundations across several layers |

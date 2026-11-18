@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="1510" viewBox="0 0 1320 1510" role="img" aria-labelledby="title desc">
+<title id="title">AIGDOS · OS / Pack 模块与项目运行时</title>
+<desc id="desc">物理能力分组及其连接关系 · v4.98-beta.1. 实线：契约使用或执行调用。虚线：状态与证据返回。 模块需显式选择；这不是所有命令必经的流水线，也不是自治调度器。</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#60758e"/></marker></defs>
+<rect width="1320" height="1510" fill="#fff"/>
+<g font-family="system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" fill="#192538">
+<text x="40" y="54" font-size="30" fill="#192538" font-weight="700" text-anchor="start">AIGDOS · OS / Pack 模块与项目运行时</text>
+<text x="40" y="91" font-size="21" fill="#58677a" font-weight="400" text-anchor="start">物理能力分组及其连接关系 · v4.98-beta.1</text>
+<g id="os-layer">
+<rect x="40" y="130" width="570" height="565" rx="12" fill="#f7f9fc" stroke="#d7dfe9"/>
+<text x="64" y="171" font-size="27" fill="#3559a6" font-weight="700" text-anchor="start">OS 层 · 可复用基础</text>
+<text x="64" y="207" font-size="20" fill="#3559a6" font-weight="400" text-anchor="start">os_layer/</text>
+<rect x="60" y="231" width="530" height="101" rx="8" fill="#fff" stroke="#d7dfe9"/>
+<text x="76" y="258" font-size="22" fill="#192538" font-weight="650" text-anchor="start">控制与治理</text>
+<text x="76" y="282" font-size="18" fill="#405168" font-weight="400" text-anchor="start">Orchestrator、权威边界与能力契约</text>
+<text x="76" y="322" font-size="16" fill="#66778a" font-weight="400" text-anchor="start">os_control_plane/ · capability_protocols/</text>
+<rect x="60" y="344" width="530" height="101" rx="8" fill="#fff" stroke="#d7dfe9"/>
+<text x="76" y="371" font-size="22" fill="#192538" font-weight="650" text-anchor="start">运行时与观察</text>
+<text x="76" y="395" font-size="18" fill="#405168" font-weight="400" text-anchor="start">State Service、任务历史与资源服务</text>
+<text x="76" y="417" font-size="18" fill="#405168" font-weight="400" text-anchor="start">选定的观察和诊断工具</text>
+<text x="76" y="435" font-size="16" fill="#66778a" font-weight="400" text-anchor="start">runtime/ · runtime_db/ · scripts/</text>
+<rect x="60" y="457" width="530" height="101" rx="8" fill="#fff" stroke="#d7dfe9"/>
+<text x="76" y="484" font-size="22" fill="#192538" font-weight="650" text-anchor="start">共享能力与 Schema</text>
+<text x="76" y="508" font-size="18" fill="#405168" font-weight="400" text-anchor="start">可复用的 Agent / Skill 基础</text>
+<text x="76" y="530" font-size="18" fill="#405168" font-weight="400" text-anchor="start">通用产物与协议定义</text>
+<text x="76" y="548" font-size="16" fill="#66778a" font-weight="400" text-anchor="start">agent_packs/ · skills/ · schemas/</text>
+<rect x="60" y="570" width="530" height="101" rx="8" fill="#fff" stroke="#d7dfe9"/>
+<text x="76" y="597" font-size="22" fill="#192538" font-weight="650" text-anchor="start">记忆与扩展</text>
+<text x="76" y="621" font-size="18" fill="#405168" font-weight="400" text-anchor="start">记忆策略、路由与经审查的演进</text>
+<text x="76" y="643" font-size="18" fill="#405168" font-weight="400" text-anchor="start">实际用户语料保存在包外</text>
+<text x="76" y="661" font-size="16" fill="#66778a" font-weight="400" text-anchor="start">ltm/ · hub/ · evolution/</text>
+</g>
+<g id="pack-layer">
+<rect x="710" y="130" width="570" height="565" rx="12" fill="#f7f9fc" stroke="#d7dfe9"/>
+<text x="734" y="171" font-size="27" fill="#287e8b" font-weight="700" text-anchor="start">Pack 层 · 游戏生产能力</text>
+<text x="734" y="207" font-size="20" fill="#287e8b" font-weight="400" text-anchor="start">pack_layer/</text>
+<rect x="730" y="231" width="530" height="101" rx="8" fill="#fff" stroke="#d7dfe9"/>
+<text x="746" y="258" font-size="22" fill="#192538" font-weight="650" text-anchor="start">生产角色与工作流</text>
+<text x="746" y="282" font-size="18" fill="#405168" font-weight="400" text-anchor="start">Agent / Skill 契约、交接与允许写入范围</text>
+<text x="746" y="322" font-size="16" fill="#66778a" font-weight="400" text-anchor="start">packs/.../end_to_end_production/</text>
+<rect x="730" y="344" width="530" height="101" rx="8" fill="#fff" stroke="#d7dfe9"/>
+<text x="746" y="371" font-size="22" fill="#192538" font-weight="650" text-anchor="start">GDD 与 CoFlow 方法</text>
+<text x="746" y="395" font-size="18" fill="#405168" font-weight="400" text-anchor="start">设计阶段、事实、依赖与变更</text>
+<text x="746" y="417" font-size="18" fill="#405168" font-weight="400" text-anchor="start">专项创作与审查契约</text>
+<text x="746" y="435" font-size="16" fill="#66778a" font-weight="400" text-anchor="start">.../end_to_end_production/references/</text>
+<rect x="730" y="457" width="530" height="101" rx="8" fill="#fff" stroke="#d7dfe9"/>
+<text x="746" y="484" font-size="22" fill="#192538" font-weight="650" text-anchor="start">交付与验证</text>
+<text x="746" y="508" font-size="18" fill="#405168" font-weight="400" text-anchor="start">产物 Schema、Shared Truth、QA 与 Readiness</text>
+<text x="746" y="530" font-size="18" fill="#405168" font-weight="400" text-anchor="start">验证器消费调用方提供的项目证据</text>
+<text x="746" y="548" font-size="16" fill="#66778a" font-weight="400" text-anchor="start">scripts/delivery/ · pack references/</text>
+<rect x="730" y="570" width="530" height="101" rx="8" fill="#fff" stroke="#d7dfe9"/>
+<text x="746" y="597" font-size="22" fill="#192538" font-weight="650" text-anchor="start">Art Pipeline Kit</text>
+<text x="746" y="621" font-size="18" fill="#405168" font-weight="400" text-anchor="start">生成契约、局部修图与素材图层</text>
+<text x="746" y="643" font-size="18" fill="#405168" font-weight="400" text-anchor="start">实际生成由宿主提供的工具完成</text>
+<text x="746" y="661" font-size="16" fill="#66778a" font-weight="400" text-anchor="start">art_pipeline_kit/</text>
+</g>
+<path d="M612 203 H708" fill="none" stroke="#60758e" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="660" y="188" font-size="15" fill="#60758e" font-weight="400" text-anchor="middle">共享基础</text>
+<path d="M325 697 V769" fill="none" stroke="#60758e" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="345" y="738" font-size="19" fill="#405168" font-weight="400" text-anchor="start">契约与运行时 API</text>
+<path d="M995 697 V769" fill="none" stroke="#60758e" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="975" y="738" font-size="19" fill="#405168" font-weight="400" text-anchor="end">技能、工作流与验证器</text>
+<g id="adapter-bridge">
+<rect x="40" y="770" width="1240" height="220" rx="12" fill="#f1f5fb" stroke="#b7c7df"/>
+<text x="64" y="807" font-size="26" fill="#3559a6" font-weight="700" text-anchor="start">宿主 / 适配器接入</text>
+<text x="64" y="840" font-size="20" fill="#405168" font-weight="400" text-anchor="start">AI 宿主提供实际执行、参与者身份与权限。</text>
+<text x="64" y="875" font-size="23" fill="#192538" font-weight="650" text-anchor="start">候选包入口</text>
+<text x="64" y="904" font-size="17" fill="#405168" font-weight="400" text-anchor="start">dev_os.py · tools/dev_os_candidate/</text>
+<text x="64" y="929" font-size="17" fill="#405168" font-weight="400" text-anchor="start">task_runtime.py</text>
+<text x="64" y="954" font-size="17" fill="#405168" font-weight="400" text-anchor="start">production_worker.py</text>
+<text x="476" y="875" font-size="23" fill="#192538" font-weight="650" text-anchor="start">宿主与引擎适配器</text>
+<text x="476" y="904" font-size="17" fill="#405168" font-weight="400" text-anchor="start">adapters/ · engine_profiles/</text>
+<text x="476" y="929" font-size="17" fill="#405168" font-weight="400" text-anchor="start">任务 / Worker / Godot / 构建绑定</text>
+<text x="888" y="875" font-size="23" fill="#192538" font-weight="650" text-anchor="start">生产组合</text>
+<text x="888" y="904" font-size="17" fill="#405168" font-weight="400" text-anchor="start">production_runtime/</text>
+<text x="888" y="929" font-size="17" fill="#405168" font-weight="400" text-anchor="start">production_packs/</text>
+<text x="888" y="954" font-size="17" fill="#405168" font-weight="400" text-anchor="start">继承能力；需要明确的项目绑定</text>
+</g>
+<path d="M250 992 V1088" fill="none" stroke="#60758e" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="231" y="1030" font-size="18" fill="#405168" font-weight="400" text-anchor="end">绑定调用与受约束写入</text>
+<path d="M702 1088 V992" fill="none" stroke="#60758e" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="718" y="1058" font-size="18" fill="#405168" font-weight="400" text-anchor="start">状态 / 产物 / 证据</text>
+<path d="M1110 992 V1088" fill="none" stroke="#60758e" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="1128" y="1042" font-size="17" fill="#405168" font-weight="400" text-anchor="start">调用选定工具</text>
+<g id="project-runtime">
+<rect x="40" y="1090" width="860" height="195" rx="12" fill="#f2f8f5" stroke="#bdd5c8"/>
+<text x="64" y="1130" font-size="25" fill="#3d7561" font-weight="700" text-anchor="start">项目运行时 · 位于开发包外</text>
+<text x="64" y="1175" font-size="21" fill="#405168" font-weight="400" text-anchor="start">.ai_dev_os/ · 绑定、任务、交接与执行轨迹</text>
+<text x="64" y="1210" font-size="21" fill="#405168" font-weight="400" text-anchor="start">游戏源码 · 场景、脚本、数据、资源与 Git</text>
+<text x="64" y="1245" font-size="21" fill="#405168" font-weight="400" text-anchor="start">选定的证据 / 产物目录 · QA、导出与报告</text>
+</g><g id="external-tools">
+<rect x="940" y="1090" width="340" height="195" rx="12" fill="#fff8ef" stroke="#dfcdb2"/>
+<text x="962" y="1130" font-size="24" fill="#976626" font-weight="700" text-anchor="start">外部工具</text>
+<text x="962" y="1175" font-size="19" fill="#405168" font-weight="400" text-anchor="start">Godot / Git / 图像工具</text>
+<text x="962" y="1210" font-size="19" fill="#405168" font-weight="400" text-anchor="start">由宿主提供</text>
+<text x="962" y="1245" font-size="19" fill="#405168" font-weight="400" text-anchor="start">结果返回项目工作区</text>
+</g>
+<path d="M938 1192 H902" fill="none" stroke="#60758e" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M470 1287 V1348" fill="none" stroke="#60758e" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="489" y="1326" font-size="18" fill="#405168" font-weight="400" text-anchor="start">读取记录 / 静态结构</text>
+<g id="project-console">
+<rect x="40" y="1350" width="1240" height="92" rx="12" fill="#f7f5fa" stroke="#d2c8df"/>
+<text x="64" y="1383" font-size="22" fill="#795d91" font-weight="650" text-anchor="start">项目 Console · tools/dev_os_console/</text>
+<text x="700" y="1383" font-size="20" fill="#405168" font-weight="400" text-anchor="start">Whiteboard · Runtime Graph · Game Map</text>
+<text x="64" y="1418" font-size="20" fill="#405168" font-weight="400" text-anchor="start">读取项目记录与静态结构；接受权威仍归原入口。</text>
+</g>
+<text x="40" y="1472" font-size="18" fill="#58677a" font-weight="400" text-anchor="start">实线：契约使用或执行调用。虚线：状态与证据返回。</text>
+<text x="40" y="1500" font-size="18" fill="#58677a" font-weight="400" text-anchor="start">模块需显式选择；这不是所有命令必经的流水线，也不是自治调度器。</text>
+</g></svg>

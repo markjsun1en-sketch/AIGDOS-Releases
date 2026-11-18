@@ -26,6 +26,8 @@
 
 [各层职责、OS / Pack 对应关系与包结构](ARCHITECTURE.md) · [查看完整分层图](docs/diagrams/layers.zh.svg)
 
+模块级关系见 [OS / Pack 图及适配器到项目运行时的连接](ARCHITECTURE.md#os--pack-模块与运行时)。
+
 <details>
 <summary>展开执行与数据流图（组件关系，不是逻辑层）</summary>
 
