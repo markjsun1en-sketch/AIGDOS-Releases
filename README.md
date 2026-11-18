@@ -6,7 +6,7 @@
 
 这里是 AIGDOS 的公开分发仓库。当前公开开发包为 **v4.98-beta.1**，面向 **macOS 上的全新 Godot 项目**，发布于 2026-11-18。
 
-[下载完整 Beta 包](https://raw.githubusercontent.com/markjsun1en-sketch/AIGDOS-Releases/main/DevOS-v4.98-beta.1-candidate.zip) · [新用户指南](V498_BETA1_QUICKSTART.md) · [完整能力说明](AIGDOS_CAPABILITIES.md) · [版本说明](V498_BETA1_RELEASE_NOTES.md) · [构建收据](V498_BETA1_BUILD_RECEIPT.json)
+[下载完整 Beta 包](https://raw.githubusercontent.com/markjsun1en-sketch/AIGDOS-Releases/main/DevOS-v4.98-beta.1-candidate.zip) · [新用户指南](V498_BETA1_QUICKSTART.md) · [完整能力说明](AIGDOS_CAPABILITIES.md) · [版本说明](V498_BETA1_RELEASE_NOTES.md) · [构建收据](V498_BETA1_BUILD_RECEIPT.json) · [MIT 许可证](LICENSE)
 
 ## AIGDOS 用来做什么
 

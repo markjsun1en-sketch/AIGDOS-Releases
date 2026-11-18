@@ -6,7 +6,7 @@
 
 This is the public distribution repository. The current public development package is **v4.98-beta.1**, released on **November 18, 2026**, for **new Godot projects on macOS**.
 
-[Download the complete Beta package](https://raw.githubusercontent.com/markjsun1en-sketch/AIGDOS-Releases/main/DevOS-v4.98-beta.1-candidate.zip) · [Quick start](V498_BETA1_QUICKSTART.en.md) · [Full capability guide](AIGDOS_CAPABILITIES.en.md) · [Release notes](V498_BETA1_RELEASE_NOTES.en.md) · [Build receipt](V498_BETA1_BUILD_RECEIPT.json)
+[Download the complete Beta package](https://raw.githubusercontent.com/markjsun1en-sketch/AIGDOS-Releases/main/DevOS-v4.98-beta.1-candidate.zip) · [Quick start](V498_BETA1_QUICKSTART.en.md) · [Full capability guide](AIGDOS_CAPABILITIES.en.md) · [Release notes](V498_BETA1_RELEASE_NOTES.en.md) · [Build receipt](V498_BETA1_BUILD_RECEIPT.json) · [MIT License](LICENSE)
 
 ## What AIGDOS is for
 
