@@ -25,6 +25,8 @@ For a **new Godot project on macOS**, you can ask your AI coding assistant to se
 
 The package includes adaptation material for **Codex**, **Cursor**, and **`workbuddy_private`**, but not every host configuration was validated in this Beta. `workbuddy_private` describes a specific private profile; it does not establish compatibility with every WorkBuddy installation. The assistant should inspect the selected profile and confirm which instructions are active in the actual host. For Codex, this includes the game project's `AGENTS.md` and any applicable override. Preserve existing project rules when configuring a host. See the [host responsibilities and limits](AIGDOS_CAPABILITIES.en.md#responsibilities-of-people-the-ai-host-and-aigdos).
 
+Setup prompts: [General](#copyable-prompt-for-a-fresh-setup) · [Cursor](#cursor-new-project-setup-prompt) · [WorkBuddy](#workbuddy-new-project-setup-prompt) · [Existing-project update assessment](#copyable-prompt-for-an-existing-project-update-assessment)
+
 ### Copyable prompt for a fresh setup
 
 A short request such as “Set up AIGDOS v4.98-beta.1 for a new Godot project” can start the setup conversation when accompanied by the release repository or local ZIP path. The following complete prompt makes the setup checks explicit:
@@ -40,6 +42,120 @@ Prepare the documented dependencies, select the profile appropriate to this AI h
 Preserve existing installations, projects, instructions, task state, and uncommitted changes. Keep the package payload unchanged. If the target is an existing project, assess migration support first instead of treating it as a fresh installation.
 
 Report the package/project paths, active host instructions, doctor result, execution evidence, and remaining review/acceptance steps. Do not describe CLAIMED_DONE as human acceptance or full-release qualification.
+```
+
+### Cursor new-project setup prompt
+
+**Adaptation limits:** `cursor` selects an AI-host profile; `godot` in `doctor --profile godot` selects engine checks. They are not interchangeable. The packaged Cursor guidance uses project rules and a parallel-agent model managed by a coordinator; verify applicability in the current host. Basic setup does not require parallel agents, hooks, or external platform sync, and those mechanisms should not be copied from another host. This Beta has not validated every Cursor version or configuration.
+
+```text
+In Cursor, set up AIGDOS v4.98-beta.1 for a new Godot
+project on macOS. Release repository:
+https://github.com/markjsun1en-sketch/AIGDOS-Releases
+
+1. Read the quick start. Download the ZIP and checksum,
+   or use my copies. Verify SHA-256 before extraction;
+   stop on a mismatch. Use new extraction, virtual
+   environment, and game workspace directories. Keep the
+   package outside the project. If the target has content,
+   assess an update first; preserve existing installations.
+
+2. Read tools/dev_os_candidate/README.md inside the package.
+   Prepare Python, Git, Godot, and the documented dependencies.
+   Then print the Cursor reading list from the package root:
+   python3 -B tools/dev_os_candidate/profile_boot_readset.py \
+     --runtime cursor
+   Output paths are relative to:
+   AI_Game_Dev_OS_v4.97/os_layer/
+   Read the listed files, especially:
+   docs/06_runtime_profiles/cursor/RULE_LOADING.md
+   This command lists documents; it does not activate rules.
+   Identify applicable instructions and loading locations
+   using this Cursor's actual rule mechanisms. Do not import
+   another host's private Team Mode or hook conventions.
+
+3. From the package root, run:
+   python3 -B dev_os.py doctor --profile godot
+   After it passes, inspect:
+   tools/dev_os_candidate/examples/charge_meter.json
+   Follow the guide to run it with run-request in a new,
+   nonexistent external workspace whose parent exists.
+   Do not create that workspace in advance to place rules.
+   After the example creates project/, preserve its generated
+   instructions and package binding. Configure applicable
+   Cursor project rules and verify that they actually load.
+
+4. Preserve existing rules, installations, projects, task
+   state, and uncommitted changes. Keep both the ZIP and
+   extracted package payload unchanged. Report package/project
+   paths, active rules and evidence of loading, doctor results,
+   actual evidence/ artifacts, and unverified host features.
+   Example success is not acceptance of full Cursor integration.
+   CLAIMED_DONE still requires independent review and human
+   acceptance on the Whiteboard. OBS65 and CAP16 stay blocked;
+   do not claim full formal-release qualification.
+```
+
+### WorkBuddy new-project setup prompt
+
+**Adaptation limits:** `workbuddy_private` records a particular project's private coordination semantics. It does not promise compatibility with every public WorkBuddy installation. Check that the current host and project meet its conditions. If they do not, or compatibility is uncertain, basic CLI validation may still be possible with file and terminal access; report private-profile integration as unconfirmed. Basic setup does not require Team Mode, proxy sync, or external writeback. Do not copy private project identifiers, registries, or historical state from templates into a new project.
+
+```text
+In WorkBuddy, set up AIGDOS v4.98-beta.1 for a new Godot
+project on macOS. Release repository:
+https://github.com/markjsun1en-sketch/AIGDOS-Releases
+
+1. Read the quick start. Download the ZIP and checksum,
+   or use my copies. Verify SHA-256 before extraction;
+   stop on a mismatch. Use new extraction, virtual
+   environment, and game workspace directories. Keep the
+   package outside the project. If the target has content,
+   assess an update first; preserve existing installations.
+
+2. Read tools/dev_os_candidate/README.md inside the package.
+   If file and terminal access allows, prepare the documented
+   dependencies, then print the readset from the package root:
+   python3 -B tools/dev_os_candidate/profile_boot_readset.py \
+     --runtime workbuddy_private
+   Output paths are relative to:
+   AI_Game_Dev_OS_v4.97/os_layer/
+   Read those files and also:
+   docs/06_runtime_profiles/workbuddy_private/LIMITATIONS.md
+   This command lists documents; it does not activate rules.
+   Inspect the host's actual rule carriers, file/terminal
+   access, and coordination semantics. Do not select the
+   private profile based on the WorkBuddy name alone.
+   Load applicable project instructions only after confirming
+   its conditions. If compatibility is uncertain or absent,
+   report the gaps and perform only supported basic CLI setup
+   and the example. Do not enable Team Mode, proxy sync, or
+   external writeback by default. Do not copy private project
+   identifiers, registries, or historical state.
+
+3. If the required capabilities are available, run this
+   from the package root:
+   python3 -B dev_os.py doctor --profile godot
+   After it passes, inspect:
+   tools/dev_os_candidate/examples/charge_meter.json
+   Follow the guide to run it with run-request in a new,
+   nonexistent external workspace whose parent exists.
+   Do not create that workspace in advance to place rules.
+   Preserve generated project/ instructions and package
+   binding; verify any rules that the host can load.
+   If required capabilities are missing, report the blocker;
+   do not invent command results or rule-loading status.
+
+4. Preserve existing rules, installations, projects, task
+   state, and uncommitted changes. Keep both the ZIP and
+   extracted package payload unchanged. Report basic CLI
+   validation and host integration separately: package/project
+   paths, active instructions and evidence of loading,
+   doctor results, evidence/ artifacts, and unsupported or
+   unverified items. Example success does not prove
+   compatibility with the WorkBuddy private profile.
+   CLAIMED_DONE still requires independent review and human
+   acceptance on the Whiteboard. OBS65 and CAP16 stay blocked;
+   do not claim full formal-release qualification.
 ```
 
 ### Copyable prompt for an existing-project update assessment

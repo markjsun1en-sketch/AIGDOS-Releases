@@ -8,6 +8,8 @@ This is the public distribution repository. The current public development packa
 
 [Download the complete Beta package](https://raw.githubusercontent.com/markjsun1en-sketch/AIGDOS-Releases/main/DevOS-v4.98-beta.1-candidate.zip) · [Quick start](V498_BETA1_QUICKSTART.en.md) · [Full capability guide](AIGDOS_CAPABILITIES.en.md) · [Release notes](V498_BETA1_RELEASE_NOTES.en.md) · [Build receipt](V498_BETA1_BUILD_RECEIPT.json) · [MIT License](LICENSE)
 
+New-project setup prompts: [Codex](#new-project-copy-this-into-codex) · [Cursor](#new-project-copy-this-into-cursor) · [WorkBuddy](#new-project-copy-this-into-workbuddy)
+
 ## New project: copy this into Codex
 
 Paste this prompt into Codex to start setup for a **new Godot project on macOS**:
@@ -26,6 +28,63 @@ changes. Keep the package payload unchanged.
 ```
 
 [Full setup prompt and instructions](V498_BETA1_QUICKSTART.en.md#copyable-prompt-for-a-fresh-setup). For an existing project or older installation, start with an [update assessment](V498_BETA1_QUICKSTART.en.md#copyable-prompt-for-an-existing-project-update-assessment); this Beta has no general-purpose updater.
+
+## New project: copy this into Cursor
+
+**Adaptation limits:** the package provides a `cursor` profile and rule-loading guidance. Confirm which project rules the current Cursor actually loads. This Beta has not validated every host configuration; a successful example is not acceptance of complete Cursor integration.
+
+```text
+In Cursor, set up AIGDOS v4.98-beta.1 for a new Godot
+project on macOS. Follow this repository's quick start:
+https://github.com/markjsun1en-sketch/AIGDOS-Releases
+
+Verify the ZIP's SHA-256. Prepare the package and
+dependencies in new directories. Read the packaged
+cursor profile and rule-loading guidance. Load and verify
+project rules through mechanisms this Cursor supports.
+Do not import another host's private Team Mode or hooks.
+After doctor --profile godot passes, inspect charge_meter.json
+and use run-request in a new, nonexistent external workspace.
+Preserve generated project instructions. Report loaded rules,
+execution evidence, and any unverified integration details.
+Preserve existing projects, installations, and uncommitted
+changes. Keep the package payload unchanged. If the target
+already has content, assess an update first. CLAIMED_DONE
+still requires independent review and human acceptance.
+```
+
+[Full Cursor setup prompt and adaptation guidance](V498_BETA1_QUICKSTART.en.md#cursor-new-project-setup-prompt)
+
+## New project: copy this into WorkBuddy
+
+**Adaptation limits:** the package contains a specific `workbuddy_private` profile, not a universal installer for all WorkBuddy versions. Check applicability first. If it does not match or cannot be confirmed, validate only the basic command-line flow the host supports and report host integration as unconfirmed.
+
+```text
+In WorkBuddy, set up AIGDOS v4.98-beta.1 for a new Godot
+project on macOS. Follow this repository's quick start:
+https://github.com/markjsun1en-sketch/AIGDOS-Releases
+
+First check whether this host meets the packaged
+workbuddy_private profile's requirements. Do not select it
+based on its name alone. Do not enable Team Mode, proxy
+sync, or external writeback by default. Load only project
+instructions confirmed to apply. If compatibility is
+uncertain or absent, report the gaps and perform only basic
+CLI setup and the example, where file/terminal access allows.
+Verify the ZIP's SHA-256. Prepare the package and
+dependencies in new directories.
+After doctor --profile godot passes, inspect charge_meter.json
+and use run-request in a new, nonexistent external workspace.
+Report active instructions, evidence, and unverified items.
+Example success does not prove private-profile compatibility
+or human acceptance. Preserve existing projects,
+installations, and uncommitted changes. Keep the package
+payload unchanged. If the target already has content,
+assess an update first. CLAIMED_DONE still requires
+independent review and human acceptance.
+```
+
+[Full WorkBuddy setup prompt and adaptation guidance](V498_BETA1_QUICKSTART.en.md#workbuddy-new-project-setup-prompt)
 
 ## What AIGDOS is for
 

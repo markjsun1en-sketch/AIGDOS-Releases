@@ -8,6 +8,8 @@
 
 [下载完整 Beta 包](https://raw.githubusercontent.com/markjsun1en-sketch/AIGDOS-Releases/main/DevOS-v4.98-beta.1-candidate.zip) · [新用户指南](V498_BETA1_QUICKSTART.md) · [完整能力说明](AIGDOS_CAPABILITIES.md) · [版本说明](V498_BETA1_RELEASE_NOTES.md) · [构建收据](V498_BETA1_BUILD_RECEIPT.json) · [MIT 许可证](LICENSE)
 
+新项目安装提示词：[Codex](#新项目复制给-codex) · [Cursor](#新项目复制给-cursor) · [WorkBuddy](#新项目复制给-workbuddy)
+
 ## 新项目：复制给 Codex
 
 在 Codex 中粘贴下面这段，即可发起 **macOS 全新 Godot 项目**的安装配置：
@@ -25,6 +27,56 @@ doctor --profile godot 通过后，
 ```
 
 [查看完整安装提示词与步骤](V498_BETA1_QUICKSTART.md#可复制的全新安装提示词)。已有项目或旧版更新请先做[更新评估](V498_BETA1_QUICKSTART.md#可复制的已有项目更新评估提示词)；本 Beta 没有通用自动更新器。
+
+## 新项目：复制给 Cursor
+
+**适配边界：** 包内提供 `cursor` 配置与规则加载说明，需确认当前 Cursor 实际加载了哪些项目规则。本 Beta 未逐一验证所有宿主组合；示例成功不等于完整 Cursor 适配已验收。
+
+```text
+请在 Cursor 中为 macOS 上的全新 Godot 项目
+配置 AIGDOS v4.98-beta.1，按仓库快速指南操作：
+https://github.com/markjsun1en-sketch/AIGDOS-Releases
+
+核对 ZIP 的 SHA-256，使用全新目录准备开发包和依赖。
+阅读包内 cursor 配置及规则加载说明，
+按当前 Cursor 支持的方式加载并核实项目规则。
+不要套用其他宿主的私有 Team Mode 或 hook 机制。
+doctor --profile godot 通过后，审阅 charge_meter.json，
+用 run-request 在包外尚不存在的工作区运行示例。
+保留生成的项目指令，报告规则加载情况和执行证据；
+无法确认的适配项明确标为未验证。
+保留已有项目、安装和未提交改动，保持开发包内容不变。
+若目标已有内容，先做更新评估；CLAIMED_DONE 之后
+仍需独立审查和人工验收。
+```
+
+[Cursor 完整安装提示词与适配说明](V498_BETA1_QUICKSTART.md#cursor-新项目安装提示词)
+
+## 新项目：复制给 WorkBuddy
+
+**适配边界：** 包内是特定的 `workbuddy_private` 私有配置，不是适用于所有 WorkBuddy 版本的通用安装器。需先核对适用条件；不匹配或无法确认时，仅验证当前宿主支持的基础命令行流程，并报告宿主适配尚未确认。
+
+```text
+请在 WorkBuddy 中为 macOS 上的全新 Godot 项目
+配置 AIGDOS v4.98-beta.1，按仓库快速指南操作：
+https://github.com/markjsun1en-sketch/AIGDOS-Releases
+
+先核对当前宿主是否符合包内 workbuddy_private 的条件。
+不要仅凭名称套用私有配置；不要默认启用 Team Mode、
+代理同步或外部回写。只加载已确认适用的项目指令。
+若不匹配或无法确认，报告适配缺口，
+仅在文件和终端能力允许时执行基础命令行配置与示例。
+核对 ZIP 的 SHA-256，使用全新目录准备开发包和依赖。
+doctor --profile godot 通过后，审阅 charge_meter.json，
+用 run-request 在包外尚不存在的工作区运行示例。
+报告生效指令、执行证据和未验证项；示例成功
+不代表 WorkBuddy 私有配置已适配或人工验收通过。
+保留已有项目、安装和未提交改动，保持开发包内容不变。
+若目标已有内容，先做更新评估；CLAIMED_DONE 之后
+仍需独立审查和人工验收。
+```
+
+[WorkBuddy 完整安装提示词与适配说明](V498_BETA1_QUICKSTART.md#workbuddy-新项目安装提示词)
 
 ## AIGDOS 用来做什么
 

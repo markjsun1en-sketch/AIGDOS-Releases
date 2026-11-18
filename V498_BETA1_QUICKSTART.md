@@ -25,6 +25,8 @@
 
 包内包含 **Codex**、**Cursor** 和 **`workbuddy_private`** 的适配资料，但本 Beta 没有验证所有宿主组合。`workbuddy_private` 描述特定私有配置，不能据此认定适配了每一种 WorkBuddy 安装。助手应检查选定配置，并确认当前宿主实际启用了哪些指令。对于 Codex，这包括游戏项目的 `AGENTS.md` 及适用的覆盖文件；配置宿主时应保留已有项目规则。详见[人员、宿主与 AIGDOS 的职责边界](AIGDOS_CAPABILITIES.md#人ai-宿主和-aigdos-如何分工)。
 
+安装提示词：[通用](#可复制的全新安装提示词) · [Cursor](#cursor-新项目安装提示词) · [WorkBuddy](#workbuddy-新项目安装提示词) · [已有项目更新评估](#可复制的已有项目更新评估提示词)
+
 ### 可复制的全新安装提示词
 
 附上分发仓库或本地 ZIP 路径后，一句“请为全新 Godot 项目配置 AIGDOS v4.98-beta.1”就可以发起安装。下面的完整提示词明确了配置与检查步骤：
@@ -40,6 +42,97 @@
 保留已有安装、项目、指令、任务状态与未提交改动，保持开发包内容不变。如果目标是已有项目，先评估迁移支持，不要按全新安装处理。
 
 报告开发包/项目路径、当前生效的宿主指令、doctor 结果、执行证据，以及剩余的独立审查和人工验收步骤。不要把 CLAIMED_DONE 描述成人工验收通过或取得完整正式版本资格。
+```
+
+### Cursor 新项目安装提示词
+
+**适配边界：** `cursor` 是 AI 宿主配置，`doctor --profile godot` 中的 `godot` 是引擎检查配置，两者不能互换。包内 Cursor 资料以项目规则和协调者管理的并行代理为模型；是否可用仍需按当前宿主核对。基础安装不要求启用并行代理、hook 或外部平台同步，也不能从其他宿主照搬这些机制。Beta 未逐一验证所有 Cursor 版本及配置。
+
+```text
+请在 Cursor 中为 macOS 上的全新 Godot 项目
+配置 AIGDOS v4.98-beta.1。
+分发仓库：
+https://github.com/markjsun1en-sketch/AIGDOS-Releases
+
+1. 阅读快速指南，下载完整 ZIP 和校验文件，或使用我的副本。
+   解压前核对 SHA-256；不匹配则停止。
+   使用全新的解压目录、虚拟环境和游戏工作区，开发包放在项目外。
+   若目标已有内容，先做更新评估，不覆盖已有项目或安装。
+
+2. 阅读包内 tools/dev_os_candidate/README.md。
+   按指南准备 Python、Git、Godot 和包内声明的依赖，
+   再从包根目录打印 Cursor 的阅读清单：
+   python3 -B tools/dev_os_candidate/profile_boot_readset.py \
+     --runtime cursor
+   输出路径相对于 AI_Game_Dev_OS_v4.97/os_layer/；
+   阅读列出的文件，尤其是
+   docs/06_runtime_profiles/cursor/RULE_LOADING.md。
+   这条命令只列出文档，不会安装或激活规则。
+   根据当前 Cursor 的规则机制确定适用指令及其加载位置，
+   不照搬其他宿主的私有 Team Mode 或 hook 约定。
+
+3. 在包根目录运行 python3 -B dev_os.py doctor --profile godot。
+   通过后审阅 tools/dev_os_candidate/examples/charge_meter.json，
+   按指南运行 run-request，使用包外尚不存在的工作区，父目录需存在。
+   不要为了预先放置规则而创建 run-request 的目标工作区。
+   示例创建 project/ 后，保留生成的项目指令与包绑定，
+   配置适用的 Cursor 项目规则并确认实际加载情况。
+
+4. 保留已有规则、安装、项目、任务状态和未提交改动；
+   保持 ZIP 及解压后的开发包内容不变。
+   报告包/项目路径、生效规则及加载依据、doctor 结果、
+   evidence/ 中的实际证据和未验证的宿主功能。
+   示例成功不代表完整 Cursor 适配已验收。
+   CLAIMED_DONE 之后仍需独立审查和白板上的人工验收。
+   OBS65、CAP16 保持阻断，不宣称完整正式版本资格。
+```
+
+### WorkBuddy 新项目安装提示词
+
+**适配边界：** `workbuddy_private` 记录特定项目的私有协作语义，不是所有公开 WorkBuddy 安装的兼容性承诺。先核对当前宿主和项目是否满足该配置的条件；不匹配或无法确认时，可以在具备文件与终端能力的前提下验证基础 CLI 流程，但应将私有配置适配标为未确认。基础流程不要求启用 Team Mode、代理同步或外部回写；不要把私有模板中的项目标识、注册表或历史状态复制到新项目。
+
+```text
+请在 WorkBuddy 中为 macOS 上的全新 Godot 项目
+配置 AIGDOS v4.98-beta.1。
+分发仓库：
+https://github.com/markjsun1en-sketch/AIGDOS-Releases
+
+1. 阅读快速指南，下载完整 ZIP 和校验文件，或使用我的副本。
+   解压前核对 SHA-256；不匹配则停止。
+   使用全新的解压目录、虚拟环境和游戏工作区，开发包放在项目外。
+   若目标已有内容，先做更新评估，不覆盖已有项目或安装。
+
+2. 阅读包内 tools/dev_os_candidate/README.md。
+   若文件和终端能力允许，按指南准备依赖，
+   再从包根目录打印私有配置的阅读清单：
+   python3 -B tools/dev_os_candidate/profile_boot_readset.py \
+     --runtime workbuddy_private
+   输出路径相对于 AI_Game_Dev_OS_v4.97/os_layer/；
+   阅读清单文件，并补读
+   docs/06_runtime_profiles/workbuddy_private/LIMITATIONS.md。
+   这条命令只列出文档，不会安装或激活规则。
+   核对当前宿主的规则载体、文件/终端能力和协作语义，
+   不要仅凭 WorkBuddy 名称选择私有配置。
+   仅在适用条件确认后加载适用的项目指令；
+   不匹配或无法确认时报告缺口，仅做已支持的基础 CLI 配置与示例。
+   不默认启用 Team Mode、代理同步或外部回写，
+   不复制私有项目标识、注册表或历史状态。
+
+3. 在具备所需能力的前提下，从包根目录运行
+   python3 -B dev_os.py doctor --profile godot。
+   通过后审阅 tools/dev_os_candidate/examples/charge_meter.json，
+   按指南运行 run-request，使用包外尚不存在的工作区，父目录需存在。
+   不要为了预先放置规则而创建 run-request 的目标工作区。
+   保留生成的 project/ 指令与包绑定；能加载的规则须核实生效。
+   缺少必需能力时报告阻碍，不伪造命令结果或规则加载状态。
+
+4. 保留已有规则、安装、项目、任务状态和未提交改动；
+   保持 ZIP 及解压后的开发包内容不变。
+   分别报告基础 CLI 验证结果与宿主适配结果，列出包/项目路径、
+   生效指令及依据、doctor 结果、evidence/ 证据和未支持或未验证项。
+   示例成功不代表 WorkBuddy 私有配置已适配。
+   CLAIMED_DONE 之后仍需独立审查和白板上的人工验收。
+   OBS65、CAP16 保持阻断，不宣称完整正式版本资格。
 ```
 
 ### 可复制的已有项目更新评估提示词
