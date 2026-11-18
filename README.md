@@ -1,5 +1,24 @@
 # AI Game Dev OS release archives
 
+## v4.98-beta.1 — 新项目 Beta 开发包（2026-11-18）
+
+面向 macOS 上的全新 Godot 项目。**新用户只需下载这一个 Dev OS ZIP**，无需另外下载 v4.97 或旧版包；Python、Git、Godot 等外部依赖仍需准备。
+
+- [下载 Beta 完整包](https://raw.githubusercontent.com/markjsun1en-sketch/AIGDOS-Releases/main/DevOS-v4.98-beta.1-candidate.zip)（9,880,303 字节，约 9.42 MiB）
+- [SHA-256 校验文件](https://raw.githubusercontent.com/markjsun1en-sketch/AIGDOS-Releases/main/DevOS-v4.98-beta.1-candidate.zip.sha256)
+- [版本说明与新用户步骤](V498_BETA1_RELEASE_NOTES.md)
+- [构建收据](V498_BETA1_BUILD_RECEIPT.json)
+
+解压后从包内 `tools/dev_os_candidate/README.md` 开始，使用 `dev_os.py doctor` 检查依赖，再用 `dev_os.py run-request` 创建包外的全新项目。ZIP 内的顶层目录是 `DevOS-v4.98-beta-integration/`。
+
+构建提交：`e6d09e203980f5f2df0183b794248ca3b261496e`。SHA-256：
+
+```text
+491387e002ab37f2db1533e6dc3b38b5854933ddb1833f97ba89f2d57f76fc7d
+```
+
+已在 macOS、Python 3.13.2、Godot 4.4 实测新项目执行、正式开发导出及运行、独立审查和 Console 三个页签。本包仍是开发 Beta，未取得完整正式版本资格；OBS65、CAP16 继续阻断，不提供通用旧项目升级。详见版本说明中的能力边界。
+
 ## v4.97 — 有限候选开发包（2026-09-14）
 
 v497 有限候选阶段已关闭，包生命周期仍为 draft。完整 L3 / PC-3 和专业效能未通过验收；本次发布不替代 v496 正式验收基线。

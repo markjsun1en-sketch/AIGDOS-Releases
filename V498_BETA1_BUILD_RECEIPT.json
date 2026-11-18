@@ -1,0 +1,115 @@
+{
+  "schema": "aigdos_beta_distribution_receipt.v1",
+  "status": "beta_distribution_receipt",
+  "validation_iteration": 2,
+  "version_name_note": "Second validated artifact; not a beta.2 version assignment.",
+  "publication": {
+    "approved": true,
+    "approval_basis": "Explicit user authorization for v4.98-beta.1 public distribution using the existing repository layout.",
+    "audience": "public",
+    "repository": "https://github.com/markjsun1en-sketch/AIGDOS-Releases",
+    "layout": "repository_root_files",
+    "tag_created": false,
+    "source_main_commit": "e6d09e203980f5f2df0183b794248ca3b261496e",
+    "download_url": "https://raw.githubusercontent.com/markjsun1en-sketch/AIGDOS-Releases/main/DevOS-v4.98-beta.1-candidate.zip",
+    "checksum_url": "https://raw.githubusercontent.com/markjsun1en-sketch/AIGDOS-Releases/main/DevOS-v4.98-beta.1-candidate.zip.sha256",
+    "audience_download_validation": "Performed after publication and recorded separately; this receipt binds build identity."
+  },
+  "source": {
+    "repository": "https://github.com/markjsun1en-sketch/AIGDOS",
+    "base_main_commit": "19f8ab97580af6d77172bc961f5de35819a65f7d",
+    "build_commit": "e6d09e203980f5f2df0183b794248ca3b261496e",
+    "selected_worktree_changes": [],
+    "frozen_base_tree": "09f55bc351307c8984bdeaf5adbc2ce92def4317",
+    "increment_tree": "e06101c48bb20fb8f549de29d1aa008260e7f9bd",
+    "integrated_source_commits": [
+      "42da7560de3d8e309490703d80c0dac8235d15cc",
+      "e6d09e203980f5f2df0183b794248ca3b261496e"
+    ]
+  },
+  "artifact": {
+    "filename": "DevOS-v4.98-beta.1-candidate.zip",
+    "sha256": "491387e002ab37f2db1533e6dc3b38b5854933ddb1833f97ba89f2d57f76fc7d",
+    "bytes": 9880303,
+    "archive_root": "DevOS-v4.98-beta-integration",
+    "candidate_id": "d5e0b73271c081a2bc7a57a3137c22d12e84c8745d3daf6828c047d1503b2a04",
+    "manifest_sha256": "6c39d2f8b7e73b9d09787be36d1592342a37067125e6390d39fe65df5abd74fd",
+    "payload_files": 3879,
+    "payload_bytes": 27942109,
+    "repacked_for_distribution": false,
+    "checksum_file": "DevOS-v4.98-beta.1-candidate.zip.sha256"
+  },
+  "onboarding": {
+    "dev_os_packages_required": 1,
+    "bundled_layers": [
+      "AI_Game_Dev_OS_v4.97",
+      "AI_Game_Dev_OS_v4.98",
+      "tools"
+    ],
+    "readme_in_package": "tools/dev_os_candidate/README.md",
+    "entries": [
+      "dev_os.py doctor --profile godot",
+      "dev_os.py run-request"
+    ],
+    "new_project_only": true,
+    "external_tools_bundled": false,
+    "python_requirements": "tools/dev_os_candidate/requirements.txt"
+  },
+  "existing_acceptance": {
+    "task_id": "V498-BETA-INTEGRATE-01",
+    "revision": 7,
+    "state": "accepted",
+    "criteria_count": 3,
+    "snapshot_id": "f8e00a42287ed68a059bef40c62294df3351a29200dc122584e4a23dbecc9daa",
+    "bound_evidence_count": 19,
+    "meaning": "Acceptance of the scoped integration task; not release approval."
+  },
+  "reused_validation": {
+    "package_build_and_unpacked_verify": "PASS",
+    "python_syntax": {
+      "status": "PASS_WITH_FROZEN_EXCEPTIONS",
+      "checked_files": 1101,
+      "frozen_exception": "AI_Game_Dev_OS_v4.97/os_layer/scripts/profile_boot_readset.py",
+      "replacement": "tools/dev_os_candidate/profile_boot_readset.py"
+    },
+    "independent_source_review": "PASS",
+    "formal_macos_development_delivery": "delivered",
+    "local_double_export": "byte_identical",
+    "local_signature_verification": "pass",
+    "isolated_pck_restore_verification": "pass",
+    "exported_app_behavior_and_window_interaction": "PASS",
+    "gameplay_and_export_tasks": "CLOSED_after_independent_review",
+    "console_tabs_and_same_page_refresh": "PASS",
+    "whiteboard_save_and_restart_readback": "PASS",
+    "product_tests_rerun_for_publication": false
+  },
+  "tested_environment": {
+    "os_family": "macOS",
+    "os_version_and_hardware_matrix": "not_bound_in_reused_acceptance",
+    "python": "3.13.2",
+    "godot": "4.4.stable.official.4c311cbee",
+    "git": "2.50.1 (Apple Git-155)",
+    "pinned_python_requirements": {
+      "jsonschema": "4.26.0",
+      "PyYAML": "6.0.3"
+    },
+    "optional_tool_probes": {
+      "node": "22.14.0",
+      "ffmpeg": "8.1",
+      "ffprobe": "8.1"
+    }
+  },
+  "boundaries": {
+    "OBS65": "blocked",
+    "CAP16": "blocked",
+    "formal_version_qualification_granted": false,
+    "general_project_migration_qualified": false,
+    "full_professional_efficacy_accepted": false,
+    "cross_machine_reproducibility_qualified": false,
+    "windows_linux_qualified": false,
+    "publisher_signature_or_notarization_claimed": false,
+    "embedded_model_or_autonomous_scheduler": false
+  },
+  "publication_date": "2026-11-18",
+  "public_version": "v4.98-beta.1"
+}
