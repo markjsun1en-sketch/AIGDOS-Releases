@@ -25,7 +25,9 @@ For a **new Godot project on macOS**, you can ask your AI coding assistant to se
 
 The package includes adaptation material for **Codex**, **Cursor**, and **`workbuddy_private`**, but not every host configuration was validated in this Beta. `workbuddy_private` describes a specific private profile; it does not establish compatibility with every WorkBuddy installation. The assistant should inspect the selected profile and confirm which instructions are active in the actual host. For Codex, this includes the game project's `AGENTS.md` and any applicable override. Preserve existing project rules when configuring a host. See the [host responsibilities and limits](AIGDOS_CAPABILITIES.en.md#responsibilities-of-people-the-ai-host-and-aigdos).
 
-Setup prompts: [General](#copyable-prompt-for-a-fresh-setup) · [Cursor](#cursor-new-project-setup-prompt) · [WorkBuddy](#workbuddy-new-project-setup-prompt) · [Existing-project update assessment](#copyable-prompt-for-an-existing-project-update-assessment)
+Setup prompts: [General](#copyable-prompt-for-a-fresh-setup) · [Cursor](#cursor-new-project-setup-prompt) · [WorkBuddy](#workbuddy-new-project-setup-prompt)
+
+Existing-project update assessments: [Shared limits and general prompt](#copyable-prompt-for-an-existing-project-update-assessment) · [Codex](#codex-existing-project-update-assessment-prompt) · [Cursor](#cursor-existing-project-update-assessment-prompt) · [WorkBuddy](#workbuddy-existing-project-update-assessment-prompt)
 
 ### Copyable prompt for a fresh setup
 
@@ -162,6 +164,16 @@ https://github.com/markjsun1en-sketch/AIGDOS-Releases
 
 For an existing project, start with inspection. An applicable migration procedure, validation plan, and rollback approach are needed before changing its bindings or state; this guide does not supply a generic upgrade command.
 
+**Migration limits shared by all three hosts:**
+
+- Public Beta validation covers new Godot projects on macOS. It does not qualify general existing-project, cross-platform, or cross-host migration. Existing projects, older versions, and fixed r2 installations do not upgrade automatically. Replacing a ZIP, changing a path, or loading rules is not a completed migration.
+- The packaged `tools/dev_os_candidate/project_adoption.py` supports only the specified RandomHeroes profile with entirely archived legacy tasks. Active-task migration is not implemented. Do not change project identity or bulk-archive tasks to bypass these conditions. For other projects, identify unsupported cases or the absence of a verified path.
+- That adoption preserves old history as read-only; `archived` does not mean native task acceptance. Old LTM and selected legacy commands retain explicit legacy entry points, and external project platforms are not migrated automatically. Assess host-rule adaptation, project entry changes, and state/memory migration separately.
+- That tool's rollback checks managed files for drift and can refuse after subsequent edits. New task state and diagnostics remain; rollback does not restore a never-adopted state. It offers no complete backup/disaster-recovery guarantee. Specify backup scope, recovery verification, and data retained after rollback.
+- The prompts below request assessment only. They do not authorize rule, binding, or state changes, or execution of `apply` / `rollback`. Passing `doctor` or a new external example does not replace existing-project regression checks, independent review, or human acceptance. OBS65 and CAP16 remain blocked.
+
+These limits follow “Connect the existing RandomHeroes project” in the packaged `tools/dev_os_candidate/README.md` and the [public capability guide](AIGDOS_CAPABILITIES.en.md). The general prompt remains below; host-specific prompts follow it.
+
 ```text
 Assess whether my existing project can adopt AIGDOS v4.98-beta.1.
 Release repository: https://github.com/markjsun1en-sketch/AIGDOS-Releases
@@ -169,6 +181,175 @@ Release repository: https://github.com/markjsun1en-sketch/AIGDOS-Releases
 Read the current installation/project instructions and the target release documentation. Inspect versions, package/project bindings, task state and history, evidence, external memory references, custom host rules, and uncommitted changes.
 
 Report whether a documented migration path applies, what would change, how to validate it, how rollback would work, and what remains unsupported. Do not assume the RandomHeroes-specific adoption tool applies to my project. This request is an assessment: leave the existing installation, project bindings, state, and work products unchanged.
+```
+
+### Codex existing-project update assessment prompt
+
+```text
+In Codex, assess whether my existing project can adopt or
+update to AIGDOS v4.98-beta.1. Use read-only inspection.
+Release repository:
+https://github.com/markjsun1en-sketch/AIGDOS-Releases
+
+Produce an assessment only; do not migrate. If the target
+package is needed, inspect it in a separate external directory
+after verifying SHA-256. Preserve ZIP and extracted bytes.
+
+1. Inventory project paths, OS/engine/Dev OS versions, entry
+   points, bindings, current branch, uncommitted changes,
+   custom rules, task state and active tasks, history/evidence
+   paths, and external memory/platform references. Mark
+   missing information unknown. Run only checks confirmed
+   not to write to the existing installation or project.
+
+2. Inspect the AGENTS.md and applicable overrides actually
+   active in this project, including their scope. Compare with
+   docs/06_runtime_profiles/codex/RULE_LOADING.md under:
+   AI_Game_Dev_OS_v4.97/os_layer/
+   List proposed rule differences, loading conflicts, and
+   parent-session merge/writeback duties. Preserve custom
+   constraints; do not replace instructions with a template.
+   Assess Codex rules, project entry changes, and state
+   migration separately.
+
+3. Read the quick start and tools/dev_os_candidate/README.md.
+   There is no generic updater. project_adoption.py supports
+   only the specified RandomHeroes profile with entirely
+   archived legacy tasks; active-task migration is unsupported.
+   Do not change identity or archive active tasks to qualify.
+   Do not assume automatic state, LTM, or platform migration,
+   or equate archived with human acceptance. Without applicable
+   evidence, report that no verified path has been established.
+
+4. Report current facts and evidence, supported/unsupported/
+   unknown items, proposed file/binding changes, state retention,
+   backup scope, recovery verification, and rollback steps
+   and retained data. Check the tool's drift-refusal conditions
+   and retention of new task data; it is not complete recovery.
+   Distinguish doctor, a new-directory example, and existing
+   project regression in the validation plan. Include the
+   subsequent independent review and human acceptance steps.
+
+Do not execute apply, rollback, or run-request, change rules
+or bindings, commit, clean, or reset existing work. Preserve
+installations, projects, state, history, evidence, and
+uncommitted changes. Loaded rules or a passing doctor/new
+example do not prove migration. OBS65 and CAP16 stay blocked.
+```
+
+### Cursor existing-project update assessment prompt
+
+```text
+In Cursor, assess whether my existing project can adopt or
+update to AIGDOS v4.98-beta.1. Use read-only inspection.
+Release repository:
+https://github.com/markjsun1en-sketch/AIGDOS-Releases
+
+Produce an assessment only; do not migrate. If the target
+package is needed, inspect it in a separate external directory
+after verifying SHA-256. Preserve ZIP and extracted bytes.
+
+1. Inventory project paths, OS/engine/Dev OS versions, entry
+   points, bindings, current branch, uncommitted changes,
+   custom rules, task state and active tasks, history/evidence
+   paths, and external memory/platform references. Mark
+   missing information unknown. Run only checks confirmed
+   not to write to the existing installation or project.
+
+2. Inspect active Cursor project/team rules, repository
+   instructions, and workspace/worktree scope. Compare with
+   docs/06_runtime_profiles/cursor/ under:
+   AI_Game_Dev_OS_v4.97/os_layer/
+   Read RULE_LOADING.md and PARALLEL_AGENT_WORKTREE_MODEL.md.
+   List conflicts, proposed rule changes, and coordinator
+   merge/writeback duties. Do not import another host's
+   private Team Mode or hooks. Loaded rules do not establish
+   old-state compatibility or complete Cursor integration.
+
+3. Read the quick start and tools/dev_os_candidate/README.md.
+   There is no generic updater. project_adoption.py supports
+   only the specified RandomHeroes profile with entirely
+   archived legacy tasks; active-task migration is unsupported.
+   Do not change identity or archive active tasks to qualify.
+   Do not assume automatic state, LTM, or platform migration,
+   or equate archived with human acceptance. Without applicable
+   evidence, report that no verified path has been established.
+
+4. Report Cursor-rule adaptation and project migration
+   separately: evidence, supported/unsupported/unknown items,
+   proposed file/binding changes, state retention, backup scope,
+   recovery verification, rollback steps, and retained data.
+   Check the tool's drift-refusal conditions and retention of
+   new task data; it is not complete recovery. Distinguish
+   doctor, a new-directory example, and existing project
+   regression in the validation plan. Include the subsequent
+   independent review and human acceptance steps.
+
+Do not execute apply, rollback, or run-request, change rules
+or bindings, commit, clean, or reset existing work. Preserve
+installations, projects, state, history, evidence, and
+uncommitted changes. Loaded rules or a passing doctor/new
+example do not prove migration. OBS65 and CAP16 stay blocked.
+```
+
+### WorkBuddy existing-project update assessment prompt
+
+```text
+In WorkBuddy, assess whether my existing project can adopt
+or update to AIGDOS v4.98-beta.1. Use read-only inspection.
+Release repository:
+https://github.com/markjsun1en-sketch/AIGDOS-Releases
+
+Produce an assessment only; do not migrate. If the target
+package is needed, inspect it in a separate external directory
+after verifying SHA-256. Preserve ZIP and extracted bytes.
+
+1. Inventory project paths, OS/engine/Dev OS versions, entry
+   points, bindings, current branch, uncommitted changes,
+   custom rules, task state and active tasks, history/evidence
+   paths, and external memory/platform references. Mark
+   missing information unknown. Run only checks confirmed
+   not to write to the existing installation or project.
+
+2. Read docs/06_runtime_profiles/workbuddy_private/ under:
+   AI_Game_Dev_OS_v4.97/os_layer/
+   Inspect LIMITATIONS.md, TEAM_MODE_MODEL.md, and
+   PROXY_SYNC_POLICY.md. Check that this host actually meets
+   the private profile's conditions. Inspect active rules,
+   registries/dirty state, proxy sync, and writeback ownership.
+   Do not infer compatibility from its name, copy private
+   templates/history, or enable Team Mode or sync. If it does
+   not match or evidence is missing, report the gaps without
+   claiming upgrade support. Basic CLI execution does not
+   establish private-profile compatibility.
+
+3. Read the quick start and tools/dev_os_candidate/README.md.
+   There is no generic updater. project_adoption.py supports
+   only the specified RandomHeroes profile with entirely
+   archived legacy tasks; active-task migration is unsupported.
+   Do not change identity or archive active tasks to qualify.
+   Private-profile compatibility does not establish eligibility
+   for that adoption tool. Do not assume automatic state, LTM,
+   or platform migration, or equate archived with acceptance.
+   Without applicable evidence, report that no verified path
+   has been established.
+
+4. Report host adaptation and project migration separately:
+   evidence, supported/unsupported/unknown items, proposed
+   file/binding changes, state retention, backup scope, recovery
+   verification, rollback steps, and retained data. Check the
+   tool's drift-refusal conditions and retention of new task
+   data; it is not complete recovery. Distinguish doctor, a
+   new-directory example, and existing project regression in
+   the validation plan. Include the subsequent independent
+   review and human acceptance steps.
+
+Do not execute apply, rollback, or run-request, change rules
+or bindings, commit, clean, reset work, or write to external
+platforms. Preserve installations, projects, state, history,
+evidence, and uncommitted changes. Loaded rules or a passing
+doctor/new example do not prove migration. OBS65 and CAP16
+stay blocked.
 ```
 
 ## 1. Verify the download

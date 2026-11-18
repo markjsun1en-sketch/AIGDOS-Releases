@@ -10,6 +10,8 @@ This is the public distribution repository. The current public development packa
 
 New-project setup prompts: [Codex](#new-project-copy-this-into-codex) · [Cursor](#new-project-copy-this-into-cursor) · [WorkBuddy](#new-project-copy-this-into-workbuddy)
 
+Existing-project update assessments: [Codex](#codex-existing-project-update-assessment) · [Cursor](#cursor-existing-project-update-assessment) · [WorkBuddy](#workbuddy-existing-project-update-assessment)
+
 ## New project: copy this into Codex
 
 Paste this prompt into Codex to start setup for a **new Godot project on macOS**:
@@ -85,6 +87,107 @@ independent review and human acceptance.
 ```
 
 [Full WorkBuddy setup prompt and adaptation guidance](V498_BETA1_QUICKSTART.en.md#workbuddy-new-project-setup-prompt)
+
+## Existing project: assess an update first
+
+**Migration limits:** v4.98-beta.1 has no general-purpose updater. Extracting the new package or loading host rules does not migrate an existing project. The packaged adoption tool covers only the specified RandomHeroes profile, requires all legacy tasks to be archived, and does not implement active-task migration. It cannot be applied directly to other projects. Each prompt below requests assessment only. See the [full migration limits](V498_BETA1_QUICKSTART.en.md#copyable-prompt-for-an-existing-project-update-assessment).
+
+### Codex: existing-project update assessment
+
+```text
+In Codex, assess whether my existing project can adopt or
+update to AIGDOS v4.98-beta.1. Use read-only inspection.
+Release repository:
+https://github.com/markjsun1en-sketch/AIGDOS-Releases
+
+Follow the quick start. Inspect versions, package bindings,
+entry points, task state/history, evidence, external memory,
+custom rules, and uncommitted changes. Check the AGENTS.md
+and applicable overrides actually active in this project.
+Compare them with the codex profile; list conflicts and
+proposed adjustments. If needed, inspect the target package
+in a separate external directory after verifying SHA-256.
+There is no generic updater. The RandomHeroes tool requires
+its specified profile and entirely archived legacy tasks;
+active-task migration is unsupported. Do not archive tasks
+to make the tool apply. Do not assume automatic migration of
+old state, memory, or external platforms. Report evidence for
+an applicable path, proposed changes, backup/validation/
+rollback plans, and unsupported items. Without evidence,
+state that no verified migration path has been established.
+Assessment only: do not change rules or bindings, migrate,
+or roll back. Preserve the installation, project, state,
+uncommitted changes, and package payload. Passing doctor or
+a new-project example does not prove existing-project migration.
+```
+
+[Full Codex update-assessment prompt](V498_BETA1_QUICKSTART.en.md#codex-existing-project-update-assessment-prompt)
+
+### Cursor: existing-project update assessment
+
+```text
+In Cursor, assess whether my existing project can adopt or
+update to AIGDOS v4.98-beta.1. Use read-only inspection.
+Release repository:
+https://github.com/markjsun1en-sketch/AIGDOS-Releases
+
+Follow the quick start. Inspect versions, package bindings,
+entry points, task state/history, evidence, external memory,
+custom rules, and uncommitted changes. Check active Cursor
+project/team rules and workspace scope against the cursor
+profile, including coordinator, merge, and writeback duties.
+List rule differences; do not import another host's private
+Team Mode or hooks. If needed, inspect the target package in
+a separate external directory after verifying SHA-256.
+There is no generic updater. The RandomHeroes tool requires
+its specified profile and entirely archived legacy tasks;
+active-task migration is unsupported. Do not archive tasks
+to make the tool apply. Loading Cursor rules does not migrate
+old state, memory, or external platforms. Report evidence for
+an applicable path, proposed changes, backup/validation/
+rollback plans, and unsupported items. Without evidence,
+state that no verified migration path has been established.
+Assessment only: do not change rules or bindings, migrate,
+or roll back. Preserve the installation, project, state,
+uncommitted changes, and package payload. Passing doctor or
+a new-project example does not prove existing-project migration.
+```
+
+[Full Cursor update-assessment prompt](V498_BETA1_QUICKSTART.en.md#cursor-existing-project-update-assessment-prompt)
+
+### WorkBuddy: existing-project update assessment
+
+```text
+In WorkBuddy, assess whether my existing project can adopt
+or update to AIGDOS v4.98-beta.1. Use read-only inspection.
+Release repository:
+https://github.com/markjsun1en-sketch/AIGDOS-Releases
+
+Follow the quick start. Inspect versions, package bindings,
+entry points, task state/history, evidence, external memory,
+custom rules, and uncommitted changes. First check whether
+this host meets the workbuddy_private profile's conditions.
+Inspect actual instructions, registries, proxy sync, and
+external writeback ownership. Do not infer compatibility
+from its name, copy private templates, or enable Team Mode
+or sync. If needed, inspect the target package in a separate
+external directory after verifying SHA-256.
+There is no generic updater. The RandomHeroes tool requires
+its specified profile and entirely archived legacy tasks;
+active-task migration is unsupported. Do not archive tasks
+to make the tool apply. Private-profile compatibility does
+not prove that state, memory, or external platforms migrate.
+Report host compatibility and project migration separately:
+evidence, gaps, proposed changes, and backup/validation/
+rollback plans. Do not claim upgrade support when either
+compatibility is absent or evidence is insufficient.
+Assessment only: do not change rules or bindings, migrate,
+or roll back. Preserve the installation, project, state,
+uncommitted changes, and package payload. Passing doctor or
+a new-project example does not prove existing-project migration.
+```
+
+[Full WorkBuddy update-assessment prompt](V498_BETA1_QUICKSTART.en.md#workbuddy-existing-project-update-assessment-prompt)
 
 ## What AIGDOS is for
 
