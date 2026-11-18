@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="1020" viewBox="0 0 1120 1020" role="img" aria-labelledby="title desc">
+<title id="title">AIGDOS · Six logical architecture layers</title>
+<desc id="desc">Logical layers are responsibilities, not folders or autonomous services. v4.97 / v4.98 identify build inputs. OS / Pack is a separate physical split.</desc>
+<defs><marker id="down" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#8491a3"/></marker></defs>
+<rect width="1120" height="1020" fill="#ffffff"/>
+<g font-family="system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" fill="#192538">
+<text x="40" y="55" font-size="30" font-weight="700">AIGDOS · Six logical architecture layers</text>
+<text x="40" y="91" font-size="21" fill="#58677a">Responsibilities and authority · v4.98-beta.1</text>
+<g id="layer-1">
+<rect x="40" y="132" width="1020" height="116" rx="12" fill="#f7f9fc" stroke="#d7dfe9"/>
+<path d="M52 132 H57 V248 H52 Q40 248 40 236 V144 Q40 132 52 132 Z" fill="#3559A6"/>
+<text x="78" y="203" font-size="36" font-weight="700" fill="#3559A6">L1</text>
+<text x="152" y="180" font-size="23" font-weight="650">Control and</text>
+<text x="152" y="211" font-size="23" font-weight="650">authority</text>
+<path d="M393 154 V226" stroke="#d7dfe9"/>
+<text x="418" y="180" font-size="22">Human approval, scope, acceptance, promotion</text>
+<text x="418" y="212" font-size="21" fill="#58677a">Orchestrator coordinates within its authority</text>
+</g>
+<path d="M580 249 V263" stroke="#8491a3" stroke-width="1.5" fill="none" marker-end="url(#down)"/>
+<g id="layer-2">
+<rect x="40" y="268" width="1020" height="116" rx="12" fill="#f7f9fc" stroke="#d7dfe9"/>
+<path d="M52 268 H57 V384 H52 Q40 384 40 372 V280 Q40 268 52 268 Z" fill="#5265B4"/>
+<text x="78" y="339" font-size="36" font-weight="700" fill="#5265B4">L2</text>
+<text x="152" y="316" font-size="23" font-weight="650">Planning and</text>
+<text x="152" y="347" font-size="23" font-weight="650">governance</text>
+<path d="M393 290 V362" stroke="#d7dfe9"/>
+<text x="418" y="316" font-size="22">Intent, roadmap, change and lifecycle rules</text>
+<text x="418" y="348" font-size="21" fill="#58677a">Defines the plan and operating constraints</text>
+</g>
+<path d="M580 385 V399" stroke="#8491a3" stroke-width="1.5" fill="none" marker-end="url(#down)"/>
+<g id="layer-3">
+<rect x="40" y="404" width="1020" height="116" rx="12" fill="#f7f9fc" stroke="#d7dfe9"/>
+<path d="M52 404 H57 V520 H52 Q40 520 40 508 V416 Q40 404 52 404 Z" fill="#287E8B"/>
+<text x="78" y="475" font-size="36" font-weight="700" fill="#287E8B">L3</text>
+<text x="152" y="452" font-size="23" font-weight="650">Execution and</text>
+<text x="152" y="483" font-size="23" font-weight="650">capability</text>
+<path d="M393 426 V498" stroke="#d7dfe9"/>
+<text x="418" y="452" font-size="22">Packs, agents, skills, workflows, and tools</text>
+<text x="418" y="484" font-size="21" fill="#58677a">Host and adapters perform scoped work</text>
+</g>
+<path d="M580 521 V535" stroke="#8491a3" stroke-width="1.5" fill="none" marker-end="url(#down)"/>
+<g id="layer-4">
+<rect x="40" y="540" width="1020" height="116" rx="12" fill="#f7f9fc" stroke="#d7dfe9"/>
+<path d="M52 540 H57 V656 H52 Q40 656 40 644 V552 Q40 540 52 540 Z" fill="#3D7561"/>
+<text x="78" y="611" font-size="36" font-weight="700" fill="#3D7561">L4</text>
+<text x="152" y="588" font-size="23" font-weight="650">Runtime core and</text>
+<text x="152" y="619" font-size="23" font-weight="650">sources of truth</text>
+<path d="M393 562 V634" stroke="#d7dfe9"/>
+<text x="418" y="588" font-size="22">Code, schemas, manifests, task state</text>
+<text x="418" y="620" font-size="21" fill="#58677a">Project bindings, Shared Truth, traces, artifacts</text>
+</g>
+<path d="M580 657 V671" stroke="#8491a3" stroke-width="1.5" fill="none" marker-end="url(#down)"/>
+<g id="layer-5">
+<rect x="40" y="676" width="1020" height="116" rx="12" fill="#f7f9fc" stroke="#d7dfe9"/>
+<path d="M52 676 H57 V792 H52 Q40 792 40 780 V688 Q40 676 52 676 Z" fill="#976626"/>
+<text x="78" y="747" font-size="36" font-weight="700" fill="#976626">L5</text>
+<text x="152" y="724" font-size="23" font-weight="650">Validation and</text>
+<text x="152" y="755" font-size="23" font-weight="650">evidence</text>
+<path d="M393 698 V770" stroke="#d7dfe9"/>
+<text x="418" y="724" font-size="22">QA, semantic checks, independent review</text>
+<text x="418" y="756" font-size="21" fill="#58677a">Evidence and readiness inform decisions</text>
+</g>
+<path d="M580 793 V807" stroke="#8491a3" stroke-width="1.5" fill="none" marker-end="url(#down)"/>
+<g id="layer-6">
+<rect x="40" y="812" width="1020" height="116" rx="12" fill="#f7f9fc" stroke="#d7dfe9"/>
+<path d="M52 812 H57 V928 H52 Q40 928 40 916 V824 Q40 812 52 812 Z" fill="#795D91"/>
+<text x="78" y="883" font-size="36" font-weight="700" fill="#795D91">L6</text>
+<text x="152" y="860" font-size="23" font-weight="650">Observation and</text>
+<text x="152" y="891" font-size="23" font-weight="650">delivery</text>
+<path d="M393 834 V906" stroke="#d7dfe9"/>
+<text x="418" y="860" font-size="22">Console, reports, development delivery</text>
+<text x="418" y="892" font-size="21" fill="#58677a">Release archives and controlled retention</text>
+</g>
+<path d="M1062 734 H1086 V190 H1063" stroke="#8491a3" stroke-width="1.5" stroke-dasharray="5 5" fill="none" marker-end="url(#down)"/>
+<text transform="translate(1110 585) rotate(-90)" font-size="18" fill="#58677a">Evidence for review</text>
+<text x="40" y="970" font-size="21" fill="#405168">Logical layers are responsibilities, not folders or autonomous services.</text>
+<text x="40" y="1000" font-size="19" fill="#58677a">v4.97 / v4.98 identify build inputs. OS / Pack is a separate physical split.</text>
+</g></svg>

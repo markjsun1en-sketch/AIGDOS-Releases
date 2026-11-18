@@ -20,11 +20,22 @@
 
 ## Dev OS 架构
 
+架构需要分开看：**L1–L6 是逻辑职责层，OS / Pack 是物理拆分，v4.97 / v4.98 是版本来源。** 它们不是同一组层级。
+
+![AIGDOS 六层逻辑架构](docs/diagrams/layers.zh.svg)
+
+[各层职责、OS / Pack 对应关系与包结构](ARCHITECTURE.md) · [查看完整分层图](docs/diagrams/layers.zh.svg)
+
+<details>
+<summary>展开执行与数据流图（组件关系，不是逻辑层）</summary>
+
 ![AIGDOS 开发架构：AI 宿主、完整开发包、外部工具、包外项目与记忆](docs/diagrams/architecture.zh.svg)
 
 [查看 SVG 原图](docs/diagrams/architecture.zh.svg) · [Mermaid 源文件](docs/diagrams/architecture.zh.mmd)
 
 箭头表示调用或数据关系，不授予权限，也不表示所有模块自动运行。固定基座提供任务运行时，v4.98 增量补充方法与工具；项目状态和用户记忆保存在包外。Console 展示记录，任务关闭和人工接受仍由原入口分别办理。交付中的检查、独立审查与接受关系见[能力说明中的流程图](AIGDOS_CAPABILITIES.md#交付流程)。
+
+</details>
 
 ## 能力概览
 

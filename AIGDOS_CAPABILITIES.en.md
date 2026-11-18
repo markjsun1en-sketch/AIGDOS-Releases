@@ -4,7 +4,7 @@
 
 Applies to **v4.98-beta.1**, released November 18, 2026. This guide is based on the contents of the published ZIP. It explains the system's purpose and operation, all 53 public skills in the production pack, bundled tools, and advanced module documentation.
 
-[Home](README.en.md) · [Quick start](V498_BETA1_QUICKSTART.en.md) · [Release notes](V498_BETA1_RELEASE_NOTES.en.md) · [Build identity and validation summary](V498_BETA1_BUILD_RECEIPT.json)
+[Home](README.en.md) · [Layered architecture](ARCHITECTURE.en.md) · [Quick start](V498_BETA1_QUICKSTART.en.md) · [Release notes](V498_BETA1_RELEASE_NOTES.en.md) · [Build identity and validation summary](V498_BETA1_BUILD_RECEIPT.json)
 
 Navigation: [Purpose and responsibilities](#1-what-it-is-for) · [Package and evidence levels](#2-package-contents-and-evidence-levels) · [Capability map](#3-from-idea-to-delivery) · [Suggested workflow](#4-suggested-workflow) · [Commands](#5-command-reference) · [Beta limits](#6-beta-limits-and-evidence) · [53 skills](#7-all-53-public-production-skills) · [Package documentation](#8-further-reading-inside-the-package)
 

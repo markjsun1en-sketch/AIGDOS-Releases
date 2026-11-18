@@ -20,11 +20,22 @@ It is intended for independent developers, small teams, game designers, and tech
 
 ## Dev OS architecture
 
+Read the architecture in separate views: **L1–L6 are logical responsibility layers, OS / Pack is the physical split, and v4.97 / v4.98 identify versioned build inputs.** They are not the same hierarchy.
+
+![AIGDOS six-layer logical architecture](docs/diagrams/layers.en.svg)
+
+[Layer responsibilities, OS / Pack mapping, and package layout](ARCHITECTURE.en.md) · [Open the full-size layer diagram](docs/diagrams/layers.en.svg)
+
+<details>
+<summary>Expand execution and data flow (component relationships, not logical layers)</summary>
+
 ![AIGDOS architecture: AI host, development package, external tools, external project and memory](docs/diagrams/architecture.en.svg)
 
 [Open SVG](docs/diagrams/architecture.en.svg) · [Mermaid source](docs/diagrams/architecture.en.mmd)
 
 Arrows show calls or data relationships. They grant no permissions and do not mean every module runs automatically. The fixed base supplies the task runtime; the v4.98 additions supply methods and tools. Project state and user memory remain outside the package. Console displays records; task closure and human acceptance are still handled separately through their original entries. See the [delivery flow in the capability guide](AIGDOS_CAPABILITIES.en.md#delivery-flow) for the relationship between checks, independent review, and acceptance.
+
+</details>
 
 ## Capability overview
 
