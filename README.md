@@ -8,6 +8,20 @@
 
 [下载完整 Beta 包](https://raw.githubusercontent.com/markjsun1en-sketch/AIGDOS-Releases/main/DevOS-v4.98-beta.1-candidate.zip) · [新用户指南](V498_BETA1_QUICKSTART.md) · [完整能力说明](AIGDOS_CAPABILITIES.md) · [版本说明](V498_BETA1_RELEASE_NOTES.md) · [构建收据](V498_BETA1_BUILD_RECEIPT.json) · [MIT 许可证](LICENSE)
 
+## 新项目：复制给 Codex
+
+在 Codex 中粘贴下面这段，即可发起 **macOS 全新 Godot 项目**的安装配置：
+
+```text
+请按快速指南，为 macOS 上的全新 Godot 项目配置 AIGDOS v4.98-beta.1。
+分发仓库：https://github.com/markjsun1en-sketch/AIGDOS-Releases
+校验 ZIP 的 SHA-256，准备依赖并加载 Codex 项目指令。
+doctor --profile godot 通过后，在开发包之外的全新目录运行示例。
+保留已有项目、安装和未提交改动，保持开发包内容不变。
+```
+
+[查看完整安装提示词与步骤](V498_BETA1_QUICKSTART.md#可复制的全新安装提示词)。已有项目或旧版更新请先做[更新评估](V498_BETA1_QUICKSTART.md#可复制的已有项目更新评估提示词)；本 Beta 没有通用自动更新器。
+
 ## AIGDOS 用来做什么
 
 开发一个游戏时，AI 需要知道“现在做什么、依据哪个设计、可以改哪里、怎样证明完成”。AIGDOS 为这些问题提供项目约定、专业工作方法、结构化交付格式、命令行工具和本地 Console。

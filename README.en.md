@@ -8,6 +8,20 @@ This is the public distribution repository. The current public development packa
 
 [Download the complete Beta package](https://raw.githubusercontent.com/markjsun1en-sketch/AIGDOS-Releases/main/DevOS-v4.98-beta.1-candidate.zip) · [Quick start](V498_BETA1_QUICKSTART.en.md) · [Full capability guide](AIGDOS_CAPABILITIES.en.md) · [Release notes](V498_BETA1_RELEASE_NOTES.en.md) · [Build receipt](V498_BETA1_BUILD_RECEIPT.json) · [MIT License](LICENSE)
 
+## New project: copy this into Codex
+
+Paste this prompt into Codex to start setup for a **new Godot project on macOS**:
+
+```text
+Set up AIGDOS v4.98-beta.1 for a new Godot project on macOS using the quick-start guide.
+Release repository: https://github.com/markjsun1en-sketch/AIGDOS-Releases
+Verify the ZIP's SHA-256, prepare dependencies, and load the Codex project instructions.
+After doctor --profile godot passes, run the example in a new directory outside the package.
+Preserve existing projects, installations, and uncommitted changes. Keep the package payload unchanged.
+```
+
+[Full setup prompt and instructions](V498_BETA1_QUICKSTART.en.md#copyable-prompt-for-a-fresh-setup). For an existing project or older installation, start with an [update assessment](V498_BETA1_QUICKSTART.en.md#copyable-prompt-for-an-existing-project-update-assessment); this Beta has no general-purpose updater.
+
 ## What AIGDOS is for
 
 When developing a game, an AI assistant needs to know what to work on, which design to follow, which files it may change, and how to demonstrate completion. AIGDOS provides project instructions, specialist working methods, structured deliverable formats, command-line tools, and a local Console for these questions.
